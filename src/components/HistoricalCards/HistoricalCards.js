@@ -3,8 +3,8 @@ import './HistoricalCards.css';
 function HistoricalCards() {
 
   return (
-    <article>
-      <p className='article'>Article Screenshot/hpyerlink?</p>
+    <article className='historical-card'>
+      <p className='article-link'>Article Screenshot/hpyerlink?</p>
       <p className='details'>"Body oddy oddy oddy" - Meg Thee Stallion</p>
       <p className='title'>title</p>
     </article>
