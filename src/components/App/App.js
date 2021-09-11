@@ -29,6 +29,7 @@ function App() {
       
       <Route path='/' render={() => <Header /> } />
       <HistoricalContainer />
+     <RocketContainer allRockets={rockets} />
     </main>
   );
 }
