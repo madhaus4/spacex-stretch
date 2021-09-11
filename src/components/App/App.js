@@ -3,6 +3,7 @@ import { getData } from '../../Utils/ApiCalls.js';
 import HistoricalContainer from '../Historical-Container/Historical-Container'
 import RocketContainer from '../Rocket-Container/Rocket-Container'
 import './App.css';
+import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
 
 
   return (
-    <main> WELCOME TO SPACEX</main>
+    <main> 
+      <HistoricalContainer />
+    </main>
   );
 }
 
