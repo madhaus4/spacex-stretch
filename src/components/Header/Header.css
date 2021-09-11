@@ -1,6 +1,6 @@
 .nav-bar {
   height: 10vh;
-  padding-bottom: 1vh;
+  padding: 1vh;
   margin: 0 5vh 5vh;
   border-bottom: 2px solid #00000029;
   display: flex;
@@ -8,12 +8,30 @@
   align-items: flex-end;
 }
 
-.header {}
+.header {
+  width: 20vw;
+  font-size: 1.75em;
+  padding: .5vh;
+}
 
-.links-container {}
+.links-container {
+  width: 15vw;
+  display: flex;
+  justify-content: space-evenly;
+}
 
-.history-link {}
+.history-link,
+.rockets-link {
+  color: inherit;
+  text-decoration: none;
+  padding: .5vh;
+}
 
-.rockets-link {}
+.history-link,
+.rockets-link:hover {
+  cursor: pointer;
+}
 
-.active {}
+.active {
+  border-bottom: 3px solid orange;
+}
