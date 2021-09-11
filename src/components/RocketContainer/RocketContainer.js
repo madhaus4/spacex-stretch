@@ -1,6 +1,5 @@
 import React from 'react';
 import './RocketContainer.css';
-// import RocketCards from '../RocketCards';
 import RocketCards from '../RocketCards/RocketCards'
 
 const RocketContainer = ({ rockets }) => {
