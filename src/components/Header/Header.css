@@ -1,0 +1,19 @@
+.nav-bar {
+  height: 10vh;
+  padding-bottom: 1vh;
+  margin: 0 5vh 5vh;
+  border-bottom: 2px solid #00000029;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header {}
+
+.links-container {}
+
+.history-link {}
+
+.rockets-link {}
+
+.active {}
