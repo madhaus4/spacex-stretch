@@ -30,7 +30,10 @@ function App() {
         <Header />
       <Switch>
         <Route exact path='/' render={() => <HistoricalContainer theHistory={history} /> } />
-        <Route exact path='/rockets' render={() => <RocketContainer theRockets={rockets} /> } />
+        <Route exact path='/rockets' render={() => <RocketContainer 
+            theRockets={rockets} 
+            onLoad={window.scrollTo(0, 0)}/> } 
+          />
         <Route render={() => <Error />} />
       </Switch>
     </main>
