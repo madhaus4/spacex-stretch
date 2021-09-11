@@ -1,7 +1,7 @@
 import React from 'react';
 import './RocketCards.css';
 
-const RocketCards = ({ id, name, description, cost, image, height, diameter, mass }) => {
+const RocketCards = ({ id, name, description, cost, firstFlight, image, height, diameter, mass }) => {
   return (
     <section>
       <h1>{name}</h1>
@@ -10,10 +10,11 @@ const RocketCards = ({ id, name, description, cost, image, height, diameter, mas
       </section>
       <section>
         <p>{description}</p>
-        <p>Cost: {cost}</p>
-        <p>Height: {height}</p>
-        <p>Diameter: {diameter}</p>
-        <p>Mass: {mass}</p>
+        <p>First Flight: {firstFlight}</p>
+        <p>Cost Per Flight: {cost}</p>
+        <p>Height: {height} ft.</p>
+        <p>Diameter: {diameter} ft.</p>
+        <p>Mass: {mass} lb.</p>
       </section>
     </section>
   )
