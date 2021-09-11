@@ -17,7 +17,12 @@ const RocketContainer = ({ rockets }) => {
     />
   ))
 
-  
+  return(
+    <section className='rocket-container'>
+      {allRockets}
+    </section>
+  )
+
 }
 
 export default RocketContainer;
