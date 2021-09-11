@@ -1,25 +1,40 @@
+.rocket-name {
+  margin: 0px 0px 10px 30px;
+  font-size: 3em;
+}
+
 .rocket-card {
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
 }
 
-section::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
+.card-body { 
+  display: flex;
+  height: 40%;
   width: 100%;
-  height: 80%;
 }
 
 .rocket-pic-container {
-  height: auto;
-  width: 45%;
-  border-radius: 10px;
+  width: 100%;
+  height: 50%;
+  align-items: center;
 }
 
 .rocket-pic {
-  object-fit: cover;
+  height: auto;
+  width: 100%;
+  border-radius: 10px; 
 }
+
+.rocket-info {
+  height: auto;
+  width: 50%;
+}
+
+.rocket-info {
+  font-size: 1em;
+  text-align: end;
+}
+
+
