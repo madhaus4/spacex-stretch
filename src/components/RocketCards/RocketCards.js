@@ -9,13 +9,13 @@ const RocketCards = ({ id, name, description, cost, firstFlight, image, height, 
         <section className='rocket-pic-container'>
           <img className='rocket-pic'src={image} alt={`rocket ${name}`} />
         </section>
-        <section>
-          <p>{description}</p>
-          <p>First Flight: {firstFlight}</p>
-          <p>Cost Per Flight: {cost}</p>
-          <p>Height: {height} ft.</p>
-          <p>Diameter: {diameter} ft.</p>
-          <p>Mass: {mass} lb.</p>
+        <section rocket='rocket-info'>
+          <p className='details'>{description}</p>
+          <p className='first-flight'>First Flight: {firstFlight}</p>
+          <p className='flight-cost'>Cost Per Flight: {cost}</p>
+          <p className='rocket-height'>Height: {height} ft.</p>
+          <p className='rocket-diameter'>Diameter: {diameter} ft.</p>
+          <p className='rocket-mass'>Mass: {mass} lb.</p>
         </section>
       </section>
     </main>
