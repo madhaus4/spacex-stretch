@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { Route } from 'react-router';
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import HistoricalContainer from '../HistoricalContainer/HistoricalContainer'
 import Header from '../Header/Header.js';
-import RocketContainer from '../RocketContainer/RocketContainer'
+import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
+import RocketContainer from '../RocketContainer/RocketContainer';
+import Error from '../Error/Error';
 import './App.css';
 
 function App() {
@@ -26,9 +27,12 @@ function App() {
 
   return (
     <main>
-      
-      <Route path='/' render={() => <Header /> } />
-      <HistoricalContainer />
+        <Header />
+      <Switch>
+        <Route exact path='/' render={() => <HistoricalContainer theHistory={history} /> } />
+        <Route exact path='/rockets' render={() => <RocketContainer theRockets={rockets} /> } />
+        <Route render={() => <Error />} />
+      </Switch>
     </main>
   );
 }
