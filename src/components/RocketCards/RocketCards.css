@@ -1,0 +1,25 @@
+.rocket-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+}
+
+.rocket-pic-container {
+  height: auto;
+  width: 45%;
+  border-radius: 10px;
+}
+
+.rocket-pic {
+  object-fit: cover;
+}
