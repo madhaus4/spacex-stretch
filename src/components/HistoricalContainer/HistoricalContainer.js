@@ -4,7 +4,7 @@ import HistoricalCards from '../HistoricalCards/HistoricalCards';
 function HistoricalContainer() {
 
   return(
-    <section>
+    <section className='historical-cards-section'>
       <HistoricalCards /> 
     </section>
   )
