@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 function Header() {
   
   return (
-    <nav>
-      <header>SpaceX</header>
-      <NavLink to='/'>History</NavLink>
-      <NavLink to='/rockets'>Rockets</NavLink>
+    <nav className='nav-bar'>
+      <header className='header'>SpaceX</header>
+      <NavLink to='/' className='history-link'>History</NavLink>
+      <NavLink to='/rockets' className='rockets-link'>Rockets</NavLink>
     </nav>
   )
 }
