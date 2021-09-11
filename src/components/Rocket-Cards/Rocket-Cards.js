@@ -15,7 +15,6 @@ const RocketCards = ({ id, name, description, cost, image, height, diameter, mas
         <p>Diameter: {diameter}</p>
         <p>Mass: {mass}</p>
       </section>
-
     </section>
   )
 }
