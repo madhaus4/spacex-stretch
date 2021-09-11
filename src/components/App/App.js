@@ -1,11 +1,26 @@
-import React, { useState } from 'react'
-import ApiCalls from './Utils/ApiCalls.js'
+import React, { useState, useEffect } from 'react'
+import { getData } from '../../Utils/ApiCalls.js';
 import './App.css';
 
 
 function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
+  const [error, setError] = useState('')
+
+  const fetchData = () => {
+    getData('history')
+      .then(data => setHistory(data))
+      .catch(error => setError(error))
+    getData('rockets')
+      .then(data => setRockets(data))
+      .catch(error => setError(error))
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
 
   return (
     <main> WELCOME TO SPACEX</main>
