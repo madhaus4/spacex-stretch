@@ -6,7 +6,6 @@ import Header from '../Header/Header.js';
 import RocketContainer from '../RocketContainer/RocketContainer'
 import './App.css';
 
-
 function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
@@ -24,7 +23,6 @@ function App() {
   useEffect(() => {
     fetchData();
   }, [])
-
 
   return (
     <main>
