@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Route } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer'
+import Header from '../Header/Header.js';
 import RocketContainer from '../RocketContainer/RocketContainer'
 import './App.css';
 
@@ -25,7 +27,9 @@ function App() {
 
 
   return (
-    <main> 
+    <main>
+      
+      <Route path='/' render={() => <Header /> } />
       <HistoricalContainer />
     </main>
   );
