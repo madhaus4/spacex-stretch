@@ -5,16 +5,15 @@ import RocketCards from '../RocketCards';
 const RocketContainer = ({ rockets }) => {
   const allRockets = rockets.map(rocket => (
     <RocketCards
-      key={rocket.id}
-      id={rocket.id}
+      key={rocket.name}
       name={rocket.name}
       description={rocket.description}
-      cost={rocket.cost}
-      firstFlight={rocket.firstFlight}
-      image={rocket..flickr_images[0]}
+      cost={rocket.cost_per_launch}
+      firstFlight={rocket.first_flight}
+      image={rocket.flickr_images[0]}
       height={rocket.height.feet}
-      diameter={rocket.diameter}
-      mass={rocket.mass}
+      diameter={rocket.diameter.feet}
+      mass={rocket.mass.lb}
     />
   ))
 
