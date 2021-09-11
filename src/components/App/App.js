@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
+import ApiCalls from './Utils/ApiCalls.js'
 import './App.css';
 
+
 function App() {
+  const [history, setHistory] = useState([])
+  const [rockets, setRockets] = useState([])
 
   return (
     <main> WELCOME TO SPACEX</main>
