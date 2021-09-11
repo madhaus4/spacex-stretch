@@ -27,7 +27,7 @@ function App() {
 
   return (
     <main>
-        <Header />
+      <Header />
       <Switch>
         <Route exact path='/' render={() => <HistoricalContainer theHistory={history} /> } />
         <Route exact path='/rockets' render={() => <RocketContainer 
