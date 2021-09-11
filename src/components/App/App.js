@@ -36,7 +36,7 @@ function App() {
           />
         <Route render={() => <Error />} />
       </Switch>
-      <footer></footer>
+      <footer>ThanX</footer>
     </main>
   );
 }
