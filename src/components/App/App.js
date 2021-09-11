@@ -26,9 +26,11 @@ function App() {
 
   return (
     <main>
-      
-      <Route path='/' render={() => <Header /> } />
-      <HistoricalContainer />
+      <Switch>
+        <Header />
+        <Route path='/' render={() => <HistoricalContainer /> } />
+        <Route path='/rockets' render={() => <RocketContainer theRockets={} /> } />
+      </Switch>
     </main>
   );
 }
