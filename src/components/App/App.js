@@ -3,7 +3,6 @@ import { getData } from '../../Utils/ApiCalls.js';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer'
 import RocketContainer from '../RocketContainer/RocketContainer'
 import './App.css';
-// import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 
 
 function App() {
