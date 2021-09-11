@@ -1,13 +1,13 @@
-import './Historical-Container.css';
-import 
+import './HistoricalContainer.css';
+import HistoricalCards from '../HistoricalCards/HistoricalCards';
 
 function HistoricalContainer() {
 
-  return (
+  return(
     <section>
-      
+      <HistoricalCards /> 
     </section>
   )
 }
 
-export default HistoricalContainer
+export default HistoricalContainer;
