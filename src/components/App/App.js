@@ -1,9 +1,12 @@
 import './App.css';
+import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 
 function App() {
 
   return (
-    <main> WELCOME TO SPACEX</main>
+    <main> 
+      <HistoricalContainer />
+    </main>
   );
 }
 
