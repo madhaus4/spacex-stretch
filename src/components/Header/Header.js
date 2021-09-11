@@ -4,9 +4,11 @@ import { NavLink } from 'react-router-dom'
 function Header() {
   
   return (
-    <NavLink to='/rockets'>
-      Rockets
-    </NavLink>
+    <nav>
+      <header>SpaceX</header>
+      <NavLink to='/'>History</NavLink>
+      <NavLink to='/rockets'>Rockets</NavLink>
+    </nav>
   )
 }
 
