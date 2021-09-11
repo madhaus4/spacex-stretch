@@ -5,6 +5,7 @@ import RocketCards from '../RocketCards';
 const RocketContainer = ({ rockets }) => {
   const allRockets = rockets.map(rocket => (
     <RocketCards
+      key={rocket.id}
       id={rocket.id}
       name={rocket.name}
       description={rocket.description}
@@ -18,8 +19,8 @@ const RocketContainer = ({ rockets }) => {
   ))
 
   return(
-    <section className='rocket-container'>
-      {allRockets}
+    <section className='rocket-container'>     
+      {allRockets}          
     </section>
   )
 
