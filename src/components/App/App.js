@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getData } from '../../Utils/ApiCalls.js';
-import HistoricalContainer from '../Historical-Container/Historical-Container'
-import RocketContainer from '../Rocket-Container/Rocket-Container'
+import HistoricalContainer from '../HistoricalContainer/HistoricalContainer'
+import RocketContainer from '../RocketContainer/RocketContainer'
 import './App.css';
-import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
+// import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 
 
 function App() {
