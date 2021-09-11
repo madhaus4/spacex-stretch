@@ -11,6 +11,7 @@ function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
   const [error, setError] = useState('')
+  const [isHomePageLoaded, setIsHomePageLoaded] = useState(true)
 
   const fetchData = () => {
     getData('history')
@@ -27,7 +28,10 @@ function App() {
 
   return (
     <main>
-      <Header />
+      <Header 
+        isHomePageLoaded={isHomePageLoaded} 
+        updateIsHomePageLoaded={updateIsHomePageLoaded}
+      />
       <Switch>
         <Route exact path='/' render={() => <HistoricalContainer theHistory={history} /> } />
         <Route exact path='/rockets' render={() => <RocketContainer 
