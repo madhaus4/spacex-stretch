@@ -1,10 +1,11 @@
 .rocket-name {
-  margin: 0px 0px 10px 30px;
+  margin: 40px 0px 10px 30px;
   font-size: 2em;
 }
 
 .rocket-card {
   position: relative;
+  background-color: grey;
   width: 100%;
   height: 100%;
 }
@@ -16,13 +17,13 @@
 }
 
 .rocket-pic-container {
-  width: 80%;
+  width: 60%;
   height: 50%;
   align-items: center;
 }
 
 .rocket-pic {
-  height: auto;
+  height: 50%;
   width: 100%;
   border-radius: 10px; 
   padding-left: 8px;
@@ -32,10 +33,19 @@
   height: auto;
   width: 50%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-.rocket-info {
-  font-size: 1em;
+.rocket-info p {
+  font-size: .75em;
 }
+
+.details {
+  margin-left: 30px;
+
+}
+
 
 
