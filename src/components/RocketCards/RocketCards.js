@@ -11,14 +11,19 @@ const RocketCards = ({ name, description, cost, firstFlight, image, height, diam
         </section>
         <section className='rocket-info'>
           <div>
-            <p>{description}</p>          
+            <p className='description'>{description}</p>          
           </div>
           <div class='details'>          
-            <p className='first-flight'>First Flight: {firstFlight}</p>
-            <p className='flight-cost'>Cost Per Flight: {cost}</p>
-            <p className='rocket-height'>Height: {height} ft.</p>
-            <p className='rocket-diameter'>Diameter: {diameter} ft.</p>
-            <p className='rocket-mass'>Mass: {mass} lb.</p>
+            <p className='first-flight'>
+              <span>First Flight:</span> {firstFlight}</p>
+            <p className='flight-cost'>
+              <span>Cost Per Flight:</span> {cost}</p>
+            <p className='rocket-height'>
+              <span>Height:</span> {height} ft.</p>
+            <p className='rocket-diameter'>
+              <span>Diameter:</span>  {diameter} ft.</p>           
+            <p className='rocket-mass'>
+              <span>Mass:</span> {mass} lb.</p>
           </div>
         </section>
       </section>
