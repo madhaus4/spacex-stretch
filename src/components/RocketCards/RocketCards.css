@@ -1,6 +1,6 @@
 .rocket-name {
   margin: 0px 0px 10px 30px;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .rocket-card {
@@ -16,7 +16,7 @@
 }
 
 .rocket-pic-container {
-  width: 100%;
+  width: 80%;
   height: 50%;
   align-items: center;
 }
@@ -25,16 +25,17 @@
   height: auto;
   width: 100%;
   border-radius: 10px; 
+  padding-left: 8px;
 }
 
 .rocket-info {
   height: auto;
   width: 50%;
+  display: flex;
 }
 
 .rocket-info {
   font-size: 1em;
-  text-align: end;
 }
 
 
