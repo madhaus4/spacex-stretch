@@ -2,7 +2,7 @@ import './HistoricalCards.css';
 import { ReactTinyLink } from 'react-tiny-link';
 // import dayjs from 'dayjs';
 
-function HistoricalCards({ title, image, details, link}) {
+function HistoricalCards({ title, image, details, link }) {
 
   return (
     <article className='historical-card'>
