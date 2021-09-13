@@ -13,7 +13,7 @@ const RocketCards = ({ name, description, cost, firstFlight, image, height, diam
           <div>
             <p className='description'>{description}</p>          
           </div>
-          <div class='details'>          
+          <div className='details'>          
             <p className='first-flight'>
               <span>First Flight:</span> {firstFlight}</p>
             <p className='flight-cost'>
