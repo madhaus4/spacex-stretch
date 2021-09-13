@@ -10,8 +10,8 @@ import './App.css';
 function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
-  const [error, setError] = useState('')
   const [launchImages, setLaunchImages] = useState([])
+  const [error, setError] = useState('')
 
   const fetchData = () => {
     getData('v4', 'history')
