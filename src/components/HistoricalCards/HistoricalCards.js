@@ -1,8 +1,8 @@
 import './HistoricalCards.css';
 import { ReactTinyLink } from 'react-tiny-link';
-import dayjs from 'dayjs';
+// import dayjs from 'dayjs';
 
-function HistoricalCards({ title, eventDate, details, link}) {
+function HistoricalCards({ title, image, details, link}) {
 
   return (
     <article className='historical-card'>
@@ -14,7 +14,7 @@ function HistoricalCards({ title, eventDate, details, link}) {
         url={link}
         header={title}
         description={details}
-        defaultMedia={'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5OTk2ODUyMTMxNzM0ODcy/gettyimages-1229892983-square.jpg'}
+        defaultMedia={image}
       />
     </article>
     
