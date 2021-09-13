@@ -11,7 +11,7 @@ function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
   const [error, setError] = useState('')
-  const [launches, setLaunches] = useState([])
+  const [launchImages, setLaunchImages] = useState([])
 
   const fetchData = () => {
     getData('v4', 'history')
@@ -21,7 +21,7 @@ function App() {
       .then(data => setRockets(data))
       .catch(error => setError(error))
     getData('v5', 'launches')
-      .then(data => setLaunches(data[19].links.flickr.original))
+      .then(data => setLaunchImages(data[19].links.flickr.original))
       .catch(error => setError(error))
   }
 
@@ -33,7 +33,11 @@ function App() {
     <main>
       <Header />
       <Switch>
-        <Route exact path='/' render={() => <HistoricalContainer theHistory={history} /> } />
+        <Route exact path='/' render={() => 
+          <HistoricalContainer 
+            theHistory={history} 
+            launchImages={launchImages}
+          /> } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
             onLoad={window.scrollTo(0, 0)}/> } 
