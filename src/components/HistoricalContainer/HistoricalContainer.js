@@ -5,17 +5,19 @@ import HistoricalCards from '../HistoricalCards/HistoricalCards';
 function HistoricalContainer({ theHistory, launchImages }) {
   const [isFavorited, setIsFavorited] = useState(true)
 
-
+  // function will set state 
 
   const allHistory = theHistory.filter(story => {
     return story.links.article && !story.links.article.includes('www.spacex.com')      
   }).map((story, i) => (
     <HistoricalCards 
       key={story.id}
+      id={story.id}
       title={story.title}
       details={story.details}
       link={story.links.article} 
       image={launchImages[i]} 
+      // function={function}
     /> 
   ))
   
