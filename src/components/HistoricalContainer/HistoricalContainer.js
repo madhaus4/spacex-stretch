@@ -8,7 +8,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
     <HistoricalCards 
       key={story.id}
       title={story.title}
-      // eventDate={story.event_date_utc}
       details={story.details}
       link={story.links.article} 
       image={launchImages[i]} 
