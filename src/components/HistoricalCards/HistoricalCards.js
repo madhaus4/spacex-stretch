@@ -2,10 +2,9 @@ import './HistoricalCards.css';
 import { ReactTinyLink } from 'react-tiny-link';
 // import dayjs from 'dayjs';
 
-function HistoricalCards({ title, image, details, link }) {
-
+function HistoricalCards({ id, title, image, details, link }) {
   return (
-    <article className='historical-card'>
+    <article className='historical-card' id={id}>
       <ReactTinyLink
         cardSize="large"
         showGraphic={true}
@@ -19,6 +18,8 @@ function HistoricalCards({ title, image, details, link }) {
       <button>✨</button>
     </article>
     
+
+
     //   <p className='title'>{title}</p>
     //   <p className='event-date'>{dayjs(eventDate).format('MM/DD/YYYY')}</p>
     //   <p className='details'>{details}</p>
