@@ -16,6 +16,7 @@ function HistoricalCards({ title, image, details, link}) {
         description={details}
         defaultMedia={image}
       />
+      <button>✨</button>
     </article>
     
     //   <p className='title'>{title}</p>
