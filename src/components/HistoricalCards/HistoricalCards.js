@@ -2,20 +2,25 @@ import './HistoricalCards.css';
 import { ReactTinyLink } from 'react-tiny-link';
 // import dayjs from 'dayjs';
 
-function HistoricalCards({ id, title, image, details, link }) {
+function HistoricalCards({ story, image, addToFavorites, isFavorited }) {
+  // const { id, title, image, details, link } = story;
+  // console.log('story', story)
   return (
-    <article className='historical-card' id={id}>
+    <article className='historical-card' id={story.id}>
       <ReactTinyLink
         cardSize="large"
         showGraphic={true}
         maxLine={2}
         minLine={1}
-        url={link}
-        header={title}
-        description={details}
+        url={story.links.article}
+        header={story.title}
+        description={story.details}
         defaultMedia={image}
       />
-      <button>✨</button>
+      <button
+        onClick={() => addToFavorites(story)}
+        >✨
+      </button>
     </article>
     
 
