@@ -21,7 +21,7 @@ function App() {
       .then(data => setRockets(data))
       .catch(error => setError(error))
     getData('v5', 'launches')
-      .then(data => setLaunchImages(data[19].links.flickr.original))
+      .then(data => setLaunchImages(data[19].links.flickr.original, data[22].links.flickr.original))
       .catch(error => setError(error))
   }
 
