@@ -16,7 +16,7 @@ function HistoricalContainer({ theHistory }) {
   
   return(
     <section className='historical-cards-section'>
-      
+      {allHistory}
     </section>
   )
 }
