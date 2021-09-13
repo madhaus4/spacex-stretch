@@ -11,13 +11,17 @@ function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
   const [error, setError] = useState('')
+  const [launches, setLaunches] = useState([])
 
   const fetchData = () => {
-    getData('history')
+    getData('v4', 'history')
       .then(data => setHistory(data))
       .catch(error => setError(error))
-    getData('rockets')
+    getData('v4', 'rockets')
       .then(data => setRockets(data))
+      .catch(error => setError(error))
+    getData('v5', 'launches')
+      .then(data => setLaunches(data[19].links.flickr.original))
       .catch(error => setError(error))
   }
 
