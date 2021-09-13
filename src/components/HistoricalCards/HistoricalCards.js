@@ -1,12 +1,16 @@
 import './HistoricalCards.css';
+import dayjs from 'dayjs';
 
-function HistoricalCards() {
+function HistoricalCards({ title, eventDate, details, link}) {
 
   return (
     <article className='historical-card'>
-      <p className='article-link'>Article Screenshot/hpyerlink?</p>
-      <p className='details'>"Body oddy oddy oddy" - Meg Thee Stallion</p>
-      <p className='title'>title</p>
+      <p className='title'>{title}</p>
+      <p className='event-date'>{dayjs(eventDate).format('MM/DD/YYYY')}</p>
+      <p className='details'>{details}</p>
+      <a href={link}className='article-link'>Click Here to View Full Article</a>
+      
+      
     </article>
   )
 }
