@@ -1,16 +1,17 @@
 import './HistoricalContainer.css';
 import HistoricalCards from '../HistoricalCards/HistoricalCards';
 
-function HistoricalContainer({ theHistory }) {
+function HistoricalContainer({ theHistory, launchImages }) {
   const allHistory = theHistory.filter(story => {
     return story.links.article && !story.links.article.includes('www.spacex.com')      
-  }).map(story => (
+  }).map((story, i) => (
     <HistoricalCards 
       key={story.id}
       title={story.title}
-      eventDate={story.event_date_utc}
+      // eventDate={story.event_date_utc}
       details={story.details}
-      link={story.links.article}  
+      link={story.links.article} 
+      image={launchImages[i]} 
     /> 
   ))
   
