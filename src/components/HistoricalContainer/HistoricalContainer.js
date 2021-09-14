@@ -6,10 +6,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
   const [favoritesList, setFavoritesList] = useState([])
   const [isFavorited, setIsFavorited] = useState(false)
 
-  const toggleDisplay = () => {
-    setIsFavorited(!isFavorited)
-  }
-
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
 
@@ -32,10 +28,14 @@ function HistoricalContainer({ theHistory, launchImages }) {
     setFavoritesList(itemsToKeep)
   }
 
-  const displayArticles = (array) => {
-    let hisTory = array.filter(story => {
-      return story.links.article && !story.links.article.includes('www.spacex.com')      
-    }).map((story, i) => (
+  const toggleDisplay = () => {
+    setIsFavorited(!isFavorited)
+  }
+
+  const displayArticles = (dataSet) => {
+    return dataSet.filter(story => {
+      return story.links.article && !story.links.article.includes('www.spacex.com')})
+      .map((story, i) => (
       <HistoricalCards 
         key={story.id}
         story={story}
@@ -43,8 +43,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
         updateFavorites={updateFavorites}
       /> 
     ))
-    console.log('hisTory', hisTory)
-    return hisTory
   }
     
   return(
