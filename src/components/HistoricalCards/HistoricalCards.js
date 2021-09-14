@@ -2,7 +2,7 @@ import './HistoricalCards.css';
 import { ReactTinyLink } from 'react-tiny-link';
 // import dayjs from 'dayjs';
 
-function HistoricalCards({ story, image, addToFavorites, isFavorited }) {
+function HistoricalCards({ story, image, toggleFavorites }) {
   // const { id, title, image, details, link } = story;
   // console.log('story', story)
   return (
@@ -18,7 +18,7 @@ function HistoricalCards({ story, image, addToFavorites, isFavorited }) {
         defaultMedia={image}
       />
       <button
-        onClick={() => addToFavorites(story)}
+        onClick={() => toggleFavorites(story)}
         >✨
       </button>
     </article>
