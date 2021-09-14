@@ -13,8 +13,19 @@ function HistoricalContainer({ theHistory, launchImages }) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
+      saveFavoriteToStorage(story)
     }
   }
+
+  const saveFavoriteToStorage = (story) => {
+    localStorage.setItem(story.id, JSON.stringify(story))
+    console.log('story', story)
+  }  
+
+  const retrieveFavoritesFromStorage = (story) => {
+    JSON.parse(localStorage.getItem(story.id))
+  }
+
   
   const addToFavorites = (story) => {
     let newFavorite = {
@@ -41,6 +52,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
         story={story}
         image={launchImages[i]} 
         updateFavorites={updateFavorites}
+        onLoad={retrieveFavoritesFromStorage(story.id)}
       /> 
     ))
   }
