@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HistoricalCards from '../HistoricalCards/HistoricalCards';
 import './HistoricalContainer.css';
 
@@ -7,30 +7,41 @@ function HistoricalContainer({ theHistory, launchImages }) {
   const [isFavorited, setIsFavorited] = useState(false)
 
   const updateFavorites = (story) => {
+    console.log('story', story)
+    console.log('favoritesList', favoritesList)
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
 
     if (foundFavorite) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
-      saveFavoriteToStorage(story)
     }
   }
 
   const saveFavoriteToStorage = (story) => {
     localStorage.setItem(story.id, JSON.stringify(story))
-    console.log('story', story)
+    // console.log('story', story)
   }  
 
-  const retrieveFavoritesFromStorage = (story) => {
-    JSON.parse(localStorage.getItem(story.id))
+  const retrieveFavoritesFromStorage = () => {
+    const keys = Object.keys(localStorage).map(element => {
+      return JSON.parse(localStorage.getItem(element))
+    })
+
+    // const newFavs = JSON.parse(localStorage.getItem(ID))
+    setFavoritesList(keys)
+    console.log('keys', keys)
   }
 
+  useEffect(() => {
+    retrieveFavoritesFromStorage()
+  }, [])
   
   const addToFavorites = (story) => {
     let newFavorite = {
       id: Date.now(), ...story
     }
+    saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
 
@@ -52,7 +63,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
         story={story}
         image={launchImages[i]} 
         updateFavorites={updateFavorites}
-        onLoad={retrieveFavoritesFromStorage(story.id)}
+        // onLoad={retrieveFavoritesFromStorage(story.id)}
       /> 
     ))
   }
