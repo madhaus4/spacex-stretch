@@ -3,16 +3,16 @@ import './HistoricalContainer.css';
 import HistoricalCards from '../HistoricalCards/HistoricalCards';
 
 function HistoricalContainer({ theHistory, launchImages }) {
-  const [isFavorited, setIsFavorited] = useState(false)
+  // const [isFavorited, setIsFavorited] = useState(false)
   const [favoritesList, setFavoritesList] = useState([])
 
   const toggleFavorites = (story) => {
-    if (!isFavorited) {
-      console.log('falsyFAV')
-      addToFavorites(story)
+    let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
+    console.log(foundFavorite)  
+    if (foundFavorite) {
+      removeFromFavorites(foundFavorite)
     } else {
-      console.log('truthyFAV')
-      removeFromFavorites(story)
+      addToFavorites(story)
     }
   }
   
@@ -21,7 +21,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
     let newFavorite = {
       id: Date.now(), ...story
     }
-    setIsFavorited(true)
     setFavoritesList([...favoritesList, newFavorite])
   }
 
@@ -31,7 +30,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
     // console.log('itemsToKeep', itemsToKeep)
 
     setFavoritesList(itemsToKeep)
-    setIsFavorited(false)
   }
 
   const allHistory = theHistory.filter(story => {
@@ -48,13 +46,11 @@ function HistoricalContainer({ theHistory, launchImages }) {
       image={launchImages[i]} 
       // addToFavorites={addToFavorites}
       toggleFavorites={toggleFavorites}
-      isFavorited={isFavorited}
     /> 
     ))
     
     return(
       <section className='historical-cards-section'>
-        {console.log('isFavorited', isFavorited)}
         {console.log('favoritesList', favoritesList)}
         <button>View Favorites</button>
         <button>View All</button>
