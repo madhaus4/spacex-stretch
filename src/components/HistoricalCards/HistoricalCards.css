@@ -2,4 +2,15 @@
   border: 3px solid black;
   background: grey;
   color: white;
+  position: relative;
+  z-index: auto;
+}
+
+.favorite-btn {
+  position: relative;
+  z-index: 5;
+}
+
+.rocket-image {
+  height: 250px;
 }
