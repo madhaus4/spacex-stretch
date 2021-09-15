@@ -67,7 +67,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
   }
     
   return(
-    <section className='historical-cards-container'>
+    <section className='articles-container'>
       <header className='articles-header'>
         <h2>Recommended For You</h2>
         <button 
@@ -76,8 +76,10 @@ function HistoricalContainer({ theHistory, launchImages }) {
           >{isFavorited ? 'View All' : 'View Favorites'}
         </button>
       </header>
-      {!isFavorited && displayArticles(theHistory)}
-      {isFavorited && displayArticles(favoritesList)}
+      <div className='articles-wrapper'>
+        {!isFavorited && displayArticles(theHistory)}
+        {isFavorited && displayArticles(favoritesList)}
+      </div>  
     </section>
   )
 }
