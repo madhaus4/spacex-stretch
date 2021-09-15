@@ -7,13 +7,14 @@ function HistoricalCards({ story, image, updateFavorites }) {
         <img className='rocket-image' src={image} />
       </div>
       <div className='info-wrapper'>
-        <h3>{story.title} ....click here to view all</h3>
-        <h3 className='article-details'>{story.details}</h3>
-        <button className='favorite-btn'
-          onClick={() => updateFavorites(story)}
-          >✨
-        </button>
+        <h3>{story.title}</h3>
+        <p className='article-details'>{story.details}</p>
+        <a href={story.links.article}>Click here to read the full article</a>
       </div>
+      <button className='favorite-btn'
+        onClick={() => updateFavorites(story)}
+        >✨
+      </button>
     </article>
   )
 }
