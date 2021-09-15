@@ -65,11 +65,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
     <section className='historical-cards-section'>
       <button 
         onClick={() => toggleDisplay()}
-        >View Favorites
-      </button>
-      <button 
-        onClick={() => toggleDisplay()}
-        >View All
+        >{isFavorited ? 'View All' : 'View Favorites'}
       </button>
       {!isFavorited && displayArticles(theHistory)}
       {isFavorited && displayArticles(favoritesList)}
