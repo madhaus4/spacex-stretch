@@ -6,7 +6,6 @@ function Header(props) {
   
   return (
     <nav className='nav-bar'>
-      {/* <header className='header'>SpaceX</header> */}
       <img className='logo' src={logo} alt='The NXT Frontier logo' />
       <div className='links-container'>
         <NavLink to='/' 
