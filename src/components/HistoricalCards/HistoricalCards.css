@@ -3,18 +3,25 @@
   height: 20vh;
   margin: 1%;
   border: 1px solid black;
-  background: whitesmoke;
+  /* background: whitesmoke; */
   display: flex;
 }
 
 .img-wrapper {
-  height: 20vh;
-  width: 25vw;
+  /* height: 20vh;
+  width: 25vw; */
+
+  height: 18vh;
+  width: 23vw;
+  align-self: center;
+  margin: 0 1vw;
 }
 
 .rocket-image {
-  height: 20vh;
-  width: 25vw;
+  height: 18vh;
+  width: 23vw;
+  /* height: 20vh;
+  width: 25vw; */
   object-fit: cover;
 }
 
