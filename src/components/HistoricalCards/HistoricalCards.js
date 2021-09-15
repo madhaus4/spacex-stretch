@@ -1,4 +1,7 @@
 import './HistoricalCards.css';
+import savedIcon from '../../savedIcon.png';
+import unsavedIcon from '../../unsavedIcon.png';
+
 
 function HistoricalCards({ story, image, updateFavorites }) {
   return (
@@ -11,10 +14,15 @@ function HistoricalCards({ story, image, updateFavorites }) {
         <p className='article-details'>{story.details}</p>
         <a href={story.links.article}>Click here to read the full article</a>
       </div>
-      <button className='favorite-btn'
+      {/* <button className='favorite-btn'
         onClick={() => updateFavorites(story)}
-        >✨
-      </button>
+        >click 
+      </button> */}
+      <img 
+        className='favorite-btn'
+        onClick={() => updateFavorites(story)}
+        src={unsavedIcon} alt='add article to reading list' 
+      />
     </article>
   )
 }
