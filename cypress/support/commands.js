@@ -70,7 +70,12 @@ Cypress.Commands.add('loadArticles', (version, category) => {
 })
 
 Cypress.Commands.add('loadImages', (version, category) => {
-
+  cy.intercept(`https://api.spacexdata.com/${version}/${category}`, {
+    body: [
+      "https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg",
+      "https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg"
+    ]
+  })
 })
 //***********************************************
 // This example commands.js shows you how to
