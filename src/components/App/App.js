@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import Header from '../Header/Header.js';
+import Header from '../Header/Header';
+import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
@@ -34,10 +35,14 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
-          <HistoricalContainer 
-            theHistory={history} 
-            launchImages={launchImages}
-          /> } />
+          <>
+            <HomePage />
+            <HistoricalContainer 
+              theHistory={history} 
+              launchImages={launchImages}
+              /> 
+          </>  
+        } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
             onLoad={window.scrollTo(0, 0)}/> } 
