@@ -28,23 +28,21 @@ Cypress.Commands.add('loadRockets', (version, category) => {
           "feet": 229.6
         },
         "diameter": {
-          "feet": 39.9
+          "feet": 12
         },
         "mass": {
-          "lb": 3125735
+          "lb": 1207920
         },   
           "flickr_images": [
-          "https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg",
-          "https://farm5.staticflickr.com/4645/38583830575_3f0f7215e6_b.jpg",
-          "https://farm5.staticflickr.com/4696/40126460511_b15bf84c85_b.jpg",
-          "https://farm5.staticflickr.com/4711/40126461411_aabc643fd8_b.jpg"
+            "https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg",
+            "https://farm4.staticflickr.com/3955/32915197674_eee74d81bb_b.jpg"
         ],
-        "name": "Falcon Heavy",
-        "cost_per_launch": 90000000,
-        "first_flight": "2018-02-06",
-        "wikipedia": "https://en.wikipedia.org/wiki/Falcon_Heavy",
-        "description": "With the ability to lift into orbit over 54 metric tons (119,000 lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost.",
-        "id": "5e9d0d95eda69974db09d1ed"
+        "name": "Falcon 9",
+        "cost_per_launch": 50000000,
+        "first_flight": "2010-06-04",
+        "wikipedia": "https://en.wikipedia.org/wiki/Falcon_9",
+        "description": "Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit.",
+        "id": "5e9d0d95eda69973a809d1ec"
       },
     ]
   })
