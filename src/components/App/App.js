@@ -31,6 +31,11 @@ function App() {
     fetchData();
   }, [])
 
+  const handleFavorite = (ID) => {
+     history.find(story => story.id === ID ? story.isFavorited = true : false
+    )
+  }
+
   return (
     <main>
       <Header />
@@ -41,6 +46,7 @@ function App() {
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
+              handleFavorite={handleFavorite}
               /> 
           </>  
         } />
