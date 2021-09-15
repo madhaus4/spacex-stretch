@@ -4,7 +4,7 @@ import './HistoricalContainer.css';
 
 function HistoricalContainer({ theHistory, launchImages }) {
   const [favoritesList, setFavoritesList] = useState([])
-  const [isFavorited, setIsFavorited] = useState(false)
+  const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
 
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
@@ -18,11 +18,17 @@ function HistoricalContainer({ theHistory, launchImages }) {
   
   const addToFavorites = (story) => {
     let newFavorite = {
-      id: Date.now(), ...story
+      id: Date.now(), 
+      isFavorited: true,
+      ...story
     }
     saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
+
+  useEffect(() => {
+    
+  }, [])
 
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
@@ -50,7 +56,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
   }, [])
 
   const toggleDisplay = () => {
-    setIsFavorited(!isFavorited)
+    setisFavoritedDisplayed(!isFavoritedDisplayed)
   }
 
   const displayArticles = (dataSet) => {
@@ -62,6 +68,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
         story={story}
         image={launchImages[i]} 
         updateFavorites={updateFavorites}
+        // isFavorited={false}
       /> 
     ))
   }
@@ -73,12 +80,12 @@ function HistoricalContainer({ theHistory, launchImages }) {
         <button 
           className='toggle-view-btn'
           onClick={() => toggleDisplay()}
-          >{isFavorited ? 'View All' : 'My Reading List'}
+          >{isFavoritedDisplayed ? 'View All' : 'My Reading List'}
         </button>
       </header>
       <div className='articles-wrapper'>
-        {!isFavorited && displayArticles(theHistory)}
-        {isFavorited && displayArticles(favoritesList)}
+        {!isFavoritedDisplayed && displayArticles(theHistory)}
+        {isFavoritedDisplayed && displayArticles(favoritesList)}
       </div>  
     </section>
   )
