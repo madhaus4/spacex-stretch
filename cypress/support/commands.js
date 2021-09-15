@@ -47,6 +47,27 @@ Cypress.Commands.add('loadRockets', (version, category) => {
     ]
   })
 })
+
+Cypress.Commands.add('loadArticles', (version, category) => {
+  cy.intercept(`https://api.spacexdata.com/${version}/${category}`, {
+    body: [
+      {
+        "title": "Falcon reaches Earth orbit",
+        "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit",
+        "links": {
+          "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"
+        }
+      },
+      {
+        "title": "Falcon reaches Earth orbit",
+        "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit",
+        "links": {
+          "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"
+        }
+      }
+    ]
+  })
+})
 //***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
