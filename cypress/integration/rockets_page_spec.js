@@ -16,4 +16,9 @@ describe('Rockets Page View', () => {
     cy.get('.history-link').click().get('.historical-cards-section').should('be.visible')
       .get('.rockets-link').click().get('.rocket-card').first().should('be.visible')
   })
+
+  it('Should display the rocket cards with images', () => {
+    cy.get('.rocket-card').first().get('img').should('have.attr', 'src').should('include', 'https://imgur.com/azYafd8.jpg')
+      .get('img[src="https://farm4.staticflickr.com/3955/32915197674_eee74d81bb_b.jpg"]').should('be.visible')
+  })
 })
