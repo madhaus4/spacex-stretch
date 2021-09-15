@@ -73,7 +73,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
         <button 
           className='toggle-view-btn'
           onClick={() => toggleDisplay()}
-          >{isFavorited ? 'View All' : 'View Favorites'}
+          >{isFavorited ? 'View All' : 'My Reading List'}
         </button>
       </header>
       <div className='articles-wrapper'>
