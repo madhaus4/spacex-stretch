@@ -15,21 +15,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
       addToFavorites(story)
     }
   }
-
-  const saveFavoriteToStorage = (story) => {
-    localStorage.setItem(story.id, JSON.stringify(story))
-  }  
-
-  const retrieveFavoritesFromStorage = () => {
-    const keys = Object.keys(localStorage).map(element => {
-      return JSON.parse(localStorage.getItem(element))
-    })
-    setFavoritesList(keys)
-  }
-
-  useEffect(() => {
-    retrieveFavoritesFromStorage()
-  }, [])
   
   const addToFavorites = (story) => {
     let newFavorite = {
@@ -42,7 +27,27 @@ function HistoricalContainer({ theHistory, launchImages }) {
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
     setFavoritesList(itemsToKeep)
+    removeFavoriteFromStorage(story.id)
   }
+
+  const saveFavoriteToStorage = (story) => {
+    localStorage.setItem(story.id, JSON.stringify(story))
+  }  
+
+  const retrieveFavoritesFromStorage = () => {
+    const keys = Object.keys(localStorage).map(element => {
+      return JSON.parse(localStorage.getItem(element))
+    })
+    setFavoritesList(keys)
+  }
+
+  const removeFavoriteFromStorage = (ID) => {
+    localStorage.removeItem(ID)
+  }
+
+  useEffect(() => {
+    retrieveFavoritesFromStorage()
+  }, [])
 
   const toggleDisplay = () => {
     setIsFavorited(!isFavorited)
