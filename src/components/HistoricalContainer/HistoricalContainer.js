@@ -67,11 +67,15 @@ function HistoricalContainer({ theHistory, launchImages }) {
   }
     
   return(
-    <section className='historical-cards-section'>
-      <button 
-        onClick={() => toggleDisplay()}
-        >{isFavorited ? 'View All' : 'View Favorites'}
-      </button>
+    <section className='historical-cards-container'>
+      <header className='articles-header'>
+        <h2>Recommended For You</h2>
+        <button 
+          className='toggle-view-btn'
+          onClick={() => toggleDisplay()}
+          >{isFavorited ? 'View All' : 'View Favorites'}
+        </button>
+      </header>
       {!isFavorited && displayArticles(theHistory)}
       {isFavorited && displayArticles(favoritesList)}
     </section>
