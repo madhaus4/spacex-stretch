@@ -59,14 +59,18 @@ Cypress.Commands.add('loadArticles', (version, category) => {
         }
       },
       {
-        "title": "Falcon reaches Earth orbit",
-        "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit",
+        "title": "Falcon delivers payload to orbit",
+        "details": "Fifth successful flight of Falcon makes history, becoming the first privately developed liquid-fuel rocket to deliver a commercial satellite to orbit",
         "links": {
           "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"
         }
       }
     ]
   })
+})
+
+Cypress.Commands.add('loadImages', (version, category) => {
+  
 })
 //***********************************************
 // This example commands.js shows you how to
