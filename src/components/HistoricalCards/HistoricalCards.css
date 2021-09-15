@@ -20,9 +20,12 @@
 
 .info-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
+
+  justify-content: space-between;
+  margin: 1%;
+  align-self: center;
+  height: 15vh;
 }
 
 .article-details {
@@ -33,6 +36,16 @@
 }
 
 .favorite-btn {
+  height: 4vh;
   position: relative;
   z-index: 5;
+  top: 10%;
+  right: 2%;
+  /* border: none;
+  background: transparent; */
+
+}
+
+.favorite-btn:hover {
+  cursor: pointer;
 }
