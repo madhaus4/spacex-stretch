@@ -2,7 +2,7 @@ import './HomePage.css';
 
 function HomePage() {
   return (
-    <section>
+    <section className='title-container'>
       <h1 className='page-header'>TEXT Here</h1>
       <div className='animated-rocket'>IMG Here</div>
     </section>  
