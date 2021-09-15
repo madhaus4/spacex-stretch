@@ -1,4 +1,16 @@
-.historical-cards-section {
+.historical-cards-container {
   height: fit-content;
-  width: 50vw;
+  /* width: 50vw; */
+}
+
+.articles-header {
+  width: 90%;
+  margin: 8% auto 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toggle-view-btn {
+  padding: 1%;
 }
