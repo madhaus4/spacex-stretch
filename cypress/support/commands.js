@@ -52,17 +52,17 @@ Cypress.Commands.add('loadArticles', (version, category) => {
   cy.intercept(`https://api.spacexdata.com/${version}/${category}`, {
     body: [
       {
-        "title": "Falcon reaches Earth orbit",
-        "details": "Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit",
+        "title": "First successfull Dragon launch",
+        "details": "SpaceX becomes the first private company to successfully launch, orbit, and recover a spacecraft.",
         "links": {
-          "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"
+          "article": "http://www.bbc.com/news/10209704"
         }
       },
       {
-        "title": "Falcon delivers payload to orbit",
-        "details": "Fifth successful flight of Falcon makes history, becoming the first privately developed liquid-fuel rocket to deliver a commercial satellite to orbit",
+        "title": "First Falcon 9 GTO mission",
+        "details": "Falcon 9 successfully depoyed payload to Geosynchronous Transfer Orbit",
         "links": {
-          "article": "http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"
+          "article": "http://www.newspacejournal.com/2013/03/27/after-dragon-spacexs-focus-returns-to-falcon/"
         }
       }
     ]
@@ -70,7 +70,7 @@ Cypress.Commands.add('loadArticles', (version, category) => {
 })
 
 Cypress.Commands.add('loadImages', (version, category) => {
-  
+
 })
 //***********************************************
 // This example commands.js shows you how to
