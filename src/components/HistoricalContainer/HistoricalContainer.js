@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import HistoricalCards from '../HistoricalCards/HistoricalCards';
 import './HistoricalContainer.css';
 
-function HistoricalContainer({ theHistory, launchImages }) {
+function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const [favoritesList, setFavoritesList] = useState([])
   const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
 
@@ -13,6 +13,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
+      handleFavorite(story.id)
     }
   }
   
@@ -22,12 +23,13 @@ function HistoricalContainer({ theHistory, launchImages }) {
       isFavorited: true,
       ...story
     }
+    handleFavorite(story.id)
     saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
 
   useEffect(() => {
-    
+
   }, [])
 
   const removeFromFavorites = (story) => {
@@ -68,7 +70,6 @@ function HistoricalContainer({ theHistory, launchImages }) {
         story={story}
         image={launchImages[i]} 
         updateFavorites={updateFavorites}
-        // isFavorited={false}
       /> 
     ))
   }
