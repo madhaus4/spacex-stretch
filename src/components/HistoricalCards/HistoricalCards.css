@@ -7,6 +7,11 @@
   display: flex;
 }
 
+.img-wrapper {
+  height: 20vh;
+  width: 25vw;
+}
+
 .rocket-image {
   height: 20vh;
   width: 25vw;
