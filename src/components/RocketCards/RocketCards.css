@@ -10,6 +10,8 @@
   height: 10%;
   padding: 1%;
   font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
 }
 
 .card-body { 
