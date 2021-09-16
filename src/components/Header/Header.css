@@ -10,7 +10,11 @@
 
 .logo {
   width: auto;
-  height: 110%;
+  /* height: 110%; */
+
+  height: 180%;
+  padding: 4px;
+  margin-bottom: -5%;
 }
 
 .links-container {
