@@ -8,6 +8,7 @@ import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
+import logo from '../../TheNXTfrontier.png'
 
 function App() {
   const [history, setHistory] = useState([])
@@ -57,7 +58,11 @@ function App() {
           />
         <Route render={() => <Error />} />
       </Switch>
-      <footer>thanX for visiting this safe seXy, spac-Xy website</footer>
+      <footer>
+        <img src={logo} alt='the NXT frontier logo' />
+        <p>thanX for visiting this safe seXy, spac-Xy website</p>
+        <a href='https://www.spacex.com/'>Please visit the SpaceX website for mor information</a>
+      </footer>
     </main>
   );
 }
