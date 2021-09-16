@@ -3,31 +3,44 @@ import './RocketCards.css';
 
 const RocketCards = ({ name, description, cost, firstFlight, image, height, diameter, mass }) => {
   return (
-    <main className='rocket-card'>
+    <article className='rocket-card'>
       <h1 className='rocket-name'>{name}</h1>
       <section className='card-body'>
-        <section className='rocket-pic-container'>
-          <img className='rocket-pic'src={image} alt={`rocket ${name}`} />
-        </section>
+        <div className='rocket-image-container'>
+          <img className='rocket-image'src={image} alt={`rocket ${name}`} />
+        </div>
         <section className='rocket-info'>
-          <div>
+          <div className='description-wrapper'>
             <p className='description'>{description}</p>          
+            <div className='details'>          
+              <p className='first-flight'>
+                <span>First Flight:</span> {firstFlight}
+              </p>
+              <p className='flight-cost'>
+                <span>Cost Per Flight:</span> {cost}
+              </p>
+            </div>
           </div>
-          <div className='details'>          
-            <p className='first-flight'>
-              <span>First Flight:</span> {firstFlight}</p>
-            <p className='flight-cost'>
-              <span>Cost Per Flight:</span> {cost}</p>
-            <p className='rocket-height'>
-              <span>Height:</span> {height} ft.</p>
-            <p className='rocket-diameter'>
-              <span>Diameter:</span>  {diameter} ft.</p>           
-            <p className='rocket-mass'>
-              <span>Mass:</span> {mass} lb.</p>
-          </div>
+          <section className='measurements-wrapper'>
+            <div className='measurements'>
+              <p>Height:</p> 
+              <h2 className='rocket-height'>
+              {height} ft.</h2>
+            </div>
+            <div className='measurements'>
+              <p>Mass:</p> 
+              <h2 className='rocket-mass'>
+              {mass} lb.</h2>
+            </div>
+            <div className='measurements'>
+              <p>Diameter:</p>  
+              <h2 className='rocket-diameter'>
+              {diameter} ft.</h2>  
+            </div>
+          </section>  
         </section>
       </section>
-    </main>
+    </article>
   )
 }
 

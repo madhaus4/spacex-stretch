@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import HistoricalCards from '../HistoricalCards/HistoricalCards';
 import './HistoricalContainer.css';
 
-function HistoricalContainer({ theHistory, launchImages }) {
+function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const [favoritesList, setFavoritesList] = useState([])
-  const [isFavorited, setIsFavorited] = useState(false)
+  const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
+
 
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
@@ -13,20 +14,33 @@ function HistoricalContainer({ theHistory, launchImages }) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
+      // handleFavorite(story.id)
     }
   }
-  
+
   const addToFavorites = (story) => {
     let newFavorite = {
-      id: Date.now(), ...story
+      id: story.id, 
+      isFavorited: true,
+      links: story.links,
+      event_date_utc: story.event_date_utc,
+      event_date_utix: story.event_date_utix,
+      details: story.details,
+      title: story.title,
     }
+    handleFavorite(story.id)
     saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
 
+  useEffect(() => {
+
+  }, [])
+
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
     setFavoritesList(itemsToKeep)
+    handleFavorite(story.id)
     removeFavoriteFromStorage(story.id)
   }
 
@@ -50,7 +64,7 @@ function HistoricalContainer({ theHistory, launchImages }) {
   }, [])
 
   const toggleDisplay = () => {
-    setIsFavorited(!isFavorited)
+    setisFavoritedDisplayed(!isFavoritedDisplayed)
   }
 
   const displayArticles = (dataSet) => {
@@ -67,13 +81,19 @@ function HistoricalContainer({ theHistory, launchImages }) {
   }
     
   return(
-    <section className='historical-cards-section'>
-      <button 
-        onClick={() => toggleDisplay()}
-        >{isFavorited ? 'View All' : 'View Favorites'}
-      </button>
-      {!isFavorited && displayArticles(theHistory)}
-      {isFavorited && displayArticles(favoritesList)}
+    <section className='articles-container'>
+      <header className='articles-header'>
+        <h2>Recommended For You</h2>
+        <button 
+          className='toggle-view-btn'
+          onClick={() => toggleDisplay()}
+          >{isFavoritedDisplayed ? 'View All' : 'My Reading List'}
+        </button>
+      </header>
+      <div className='articles-wrapper'>
+        {!isFavoritedDisplayed && displayArticles(theHistory)}
+        {isFavoritedDisplayed && displayArticles(favoritesList)}
+      </div>  
     </section>
   )
 }

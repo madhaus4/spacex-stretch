@@ -1,23 +1,32 @@
-import { ReactTinyLink } from 'react-tiny-link';
+import React, { useState } from 'react';
 import './HistoricalCards.css';
+import savedIcon from '../../savedIcon.png';
+import unsavedIcon from '../../unsavedIcon.png';
+
 
 function HistoricalCards({ story, image, updateFavorites }) {
+  // const [isFavorited, setIsFavorited] = useState(false)
+
+  // const handleIcon = () => {
+  //   setIsFavorited(!isFavorited)
+  //   updateFavorites(story)
+  // }
+
   return (
     <article className='historical-card' id={story.id}>
-      <ReactTinyLink
-        cardSize="large"
-        showGraphic={true}
-        maxLine={2}
-        minLine={1}
-        url={story.links.article}
-        header={story.title}
-        description={story.details}
-        defaultMedia={image}
-      />
-      <button
+      <div className='article-image-wrapper'>
+        <img className='article-image' src={image} />
+      </div>
+      <div className='info-wrapper'>
+        <h3>{story.title}</h3>
+        <p className='article-details'>{story.details}</p>
+        <a href={story.links.article}>Click here to read the full article</a>
+      </div>
+      <img 
+        className='favorite-btn'
         onClick={() => updateFavorites(story)}
-        >✨
-      </button>
+        src={story.isFavorited ? savedIcon : unsavedIcon} alt='add article to reading list' 
+      />
     </article>
   )
 }

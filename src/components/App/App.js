@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import Header from '../Header/Header.js';
+import {cleanData, checkFavorited} from '../../Utils/utils'
+import Header from '../Header/Header';
+import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
+import logo from '../../TheNXTfrontier.png'
 
 function App() {
   const [history, setHistory] = useState([])
@@ -15,7 +18,7 @@ function App() {
 
   const fetchData = () => {
     getData('v4', 'history')
-      .then(data => setHistory(data))
+      .then(data => setHistory(cleanData(data)))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
@@ -29,29 +32,39 @@ function App() {
     fetchData();
   }, [])
 
+  const handleFavorite = (ID) => {
+     const found = history.find(story => story.id === ID)
+     console.log(found, 'That is correct!')
+    found.isFavorited = !found.isFavorited
+  }
+
   return (
     <main>
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
-          <HistoricalContainer 
-            theHistory={history} 
-            launchImages={launchImages}
-          /> } />
+          <>
+            <HomePage />
+            <HistoricalContainer 
+              theHistory={history} 
+              launchImages={launchImages}
+              handleFavorite={handleFavorite}
+              /> 
+          </>  
+        } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
             onLoad={window.scrollTo(0, 0)}/> } 
           />
         <Route render={() => <Error />} />
       </Switch>
-      <footer>ThanX</footer>
+      <footer>
+        <img src={logo} alt='the NXT frontier logo' />
+        <p></p>
+        <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
+      </footer>
     </main>
   );
 }
 
 export default App;
-
-
-// https://api.spacexdata.com/v4/rockets
-
-// https://api.spacexdata.com/v4/history
