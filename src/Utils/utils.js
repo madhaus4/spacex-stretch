@@ -14,12 +14,12 @@ export const checkFavorited = (data) => {
  console.log(data, ' :data in utils');
  console.log(keys, ' :keys in utils');
   keys.map(key => { 
-    console.log(key, 'key<<<<<<>>> single');
+    // console.log(key, 'key<<<<<<>>> single');
     data.filter(history => {
-      console.log(history.id, ' :histroy<<<');
+      // console.log(history.id, ' :histroy<<<');
       if(history.id == key){
         history.isFavorited = true
-        console.log('testtter<<>>');
+        // console.log('testtter<<>>');
       }
   //     return history.id == key ? history.isFavorited : !history.isFavorited
     })
