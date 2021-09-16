@@ -7,8 +7,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
   const [allArticles, setAllArticles] = useState([])
 
-
-
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
 
@@ -19,7 +17,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
       handleFavorite(story.id)
     }
   }
-
 
   const addToFavorites = (story) => {
     let newFavorite = {
@@ -35,10 +32,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
     saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
-
-  useEffect(() => {
-
-  }, [])
 
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
@@ -61,12 +54,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
     localStorage.removeItem(ID)
   }
 
-  const updateArticles = () => {
-    const newHistory = setAllArticles(theHistory)
-    
-    saveFavoriteToStorage()
-  }
-
   useEffect(() => {
     retrieveFavoritesFromStorage()
   }, [])
@@ -74,9 +61,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const toggleDisplay = () => {
     setisFavoritedDisplayed(!isFavoritedDisplayed)
   }
-
-
-
 
   const displayArticles = (dataSet) => {
     return dataSet.filter(story => {
