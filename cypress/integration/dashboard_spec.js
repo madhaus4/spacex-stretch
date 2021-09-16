@@ -41,4 +41,9 @@ describe('Dashboard Page View', () => {
       .get('.toggle-view-btn').should('contain', 'View All')
   })
 
+  it('Should not display anything in the "My Reading List" if nothing has been bookmarked', () => {
+    cy.get('.toggle-view-btn').click()
+      .get('article').should('not.exist')
+  })
+
 })
