@@ -25,4 +25,8 @@ describe('Dashboard Page View', () => {
       .get(':nth-child(1) > .info-wrapper > a').should('have.attr', 'href').and('include', 'http://www.bbc.com/news/10209704')
   })
 
+  it('Should allow the user to bookmark articles', () => {
+    cy.get(':nth-child(1) > .favorite-btn').click()
+  })
+
 })
