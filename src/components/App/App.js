@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import Header from '../Header/Header.js';
+import {cleanData, checkFavorited} from '../../Utils/utils'
+import Header from '../Header/Header';
+import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
@@ -15,7 +17,8 @@ function App() {
 
   const fetchData = () => {
     getData('v4', 'history')
-      .then(data => setHistory(data))
+      .then(data => setHistory(cleanData(data)))
+      .then(() => checkFavorited(history))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
@@ -29,15 +32,25 @@ function App() {
     fetchData();
   }, [])
 
+  const handleFavorite = (ID) => {
+     history.find(story => story.id === ID ? story.isFavorited = true : false
+    )
+  }
+
   return (
     <main>
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
-          <HistoricalContainer 
-            theHistory={history} 
-            launchImages={launchImages}
-          /> } />
+          <>
+            <HomePage />
+            <HistoricalContainer 
+              theHistory={history} 
+              launchImages={launchImages}
+              handleFavorite={handleFavorite}
+              /> 
+          </>  
+        } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
             onLoad={window.scrollTo(0, 0)}/> } 

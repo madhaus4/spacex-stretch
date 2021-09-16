@@ -1,28 +1,60 @@
 .historical-card {
-  border: 3px solid black;
-  background: grey;
-  color: white;
+  width: 70vw;
+  height: 20vh;
+  margin: 1%;
+  border: 1px solid black;
+  /* background: whitesmoke; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
 }
 
-.favorite-btn {
-  position: relative;
-  z-index: 5;
+.img-wrapper {
+  /* height: 20vh;
+  width: 25vw; */
+
+  height: 18vh;
+  width: 23vw;
+  align-self: center;
+  margin: 0 1vw;
 }
 
 .rocket-image {
-  width: 100%;
-  height: 200px;
-  /* object-position: 80% 100%; */
+  height: 18vh;
+  width: 23vw;
+  /* height: 20vh;
+  width: 25vw; */
   object-fit: cover;
 }
 
-.linked-article {
+.info-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+
+  justify-content: space-between;
+  margin: 1%;
+  align-self: center;
+  height: 15vh;
+}
+
+.article-details {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.favorite-btn {
+  height: 4vh;
+  position: relative;
+  z-index: 5;
+
+  margin: 1.5%;
+  /* top: 10%;
+  right: 2%; */
+  /* border: none;
+  background: transparent; */
+
+}
+
+.favorite-btn:hover {
+  cursor: pointer;
 }
