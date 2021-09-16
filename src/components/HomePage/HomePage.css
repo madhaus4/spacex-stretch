@@ -1,6 +1,29 @@
-.title-container {
+.page-title-container {
   width: 90%;
   height: 70vh;
   margin: 2% auto;
   border-bottom: 5px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page-details {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 1% 0;
+}
+
+.animated-rocket-here {
+  width: 25%;
+  height: 1005;
 }
