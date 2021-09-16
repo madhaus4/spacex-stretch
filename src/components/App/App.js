@@ -9,6 +9,7 @@ import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
 import logo from '../../TheNXTfrontier.png'
+import logoLight from '../../TheNXTfrontier-light.svg'
 
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
         <Route render={() => <Error />} />
       </Switch>
       <footer>
-        <img src={logo} alt='the NXT frontier logo' />
+        <img src={logoLight} alt='the NXT frontier logo' />
         <p></p>
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
       </footer>
