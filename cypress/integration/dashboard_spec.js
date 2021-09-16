@@ -29,4 +29,16 @@ describe('Dashboard Page View', () => {
     cy.get(':nth-child(1) > .favorite-btn').click()
   })
 
+  it('Should allow to view only bookmarked articles when selecting the "My Reading List"', () => {
+    cy.get(':nth-child(1) > .favorite-btn').click()
+      .get('.toggle-view-btn').click()
+      .get('h3').should('contain', 'First successfull Dragon launch')
+  })
+
+  it('Should switch the button inner text to "View All" when looking at bookmarked articles', () => {
+    cy.get(':nth-child(1) > .favorite-btn').click()
+      .get('.toggle-view-btn').click()
+      .get('.toggle-view-btn').should('contain', 'View All')
+  })
+
 })
