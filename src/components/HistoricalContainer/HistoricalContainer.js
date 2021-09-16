@@ -6,6 +6,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const [favoritesList, setFavoritesList] = useState([])
   const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
 
+
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
 
@@ -16,12 +17,16 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
       handleFavorite(story.id)
     }
   }
-  
+
   const addToFavorites = (story) => {
     let newFavorite = {
-      id: Date.now(), 
+      id: story.id, 
       isFavorited: true,
-      ...story
+      links: story.links,
+      event_date_utc: story.event_date_utc,
+      event_date_utix: story.event_date_utix,
+      details: story.details,
+      title: story.title,
     }
     handleFavorite(story.id)
     saveFavoriteToStorage(newFavorite)

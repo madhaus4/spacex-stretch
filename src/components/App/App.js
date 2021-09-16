@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import cleanData from '../../Utils/utils'
+import {cleanData, checkFavorited} from '../../Utils/utils'
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
@@ -18,6 +18,7 @@ function App() {
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
+      .then(() => checkFavorited(history))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
