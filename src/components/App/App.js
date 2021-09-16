@@ -61,7 +61,7 @@ function App() {
       <footer>
         <img src={logo} alt='the NXT frontier logo' />
         <p>thanX for visiting this safe seXy, spac-Xy website</p>
-        <a href='https://www.spacex.com/'>Please visit the SpaceX website for mor information</a>
+        <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
       </footer>
     </main>
   );
