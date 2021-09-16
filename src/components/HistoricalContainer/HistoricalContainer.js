@@ -14,7 +14,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
-      handleFavorite(story.id)
+      // handleFavorite(story.id)
     }
   }
 
@@ -40,6 +40,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
     setFavoritesList(itemsToKeep)
+    handleFavorite(story.id)
     removeFavoriteFromStorage(story.id)
   }
 
