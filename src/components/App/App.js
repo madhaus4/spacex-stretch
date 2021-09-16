@@ -57,14 +57,9 @@ function App() {
           />
         <Route render={() => <Error />} />
       </Switch>
-      <footer>ThanX</footer>
+      <footer>thanX for visiting this safe seXy, spac-Xy website</footer>
     </main>
   );
 }
 
 export default App;
-
-
-// https://api.spacexdata.com/v4/rockets
-
-// https://api.spacexdata.com/v4/history
