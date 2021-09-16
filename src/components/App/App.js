@@ -60,7 +60,7 @@ function App() {
       </Switch>
       <footer>
         <img src={logo} alt='the NXT frontier logo' />
-        <p>thanX for visiting this safe seXy, spac-Xy website</p>
+        <p></p>
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
       </footer>
     </main>
