@@ -18,7 +18,7 @@ function App() {
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
-      .then(() => setHistory(checkFavorited(history)))
+      .then(() => checkFavorited(history))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
