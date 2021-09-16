@@ -1,8 +1,7 @@
 let CACHE_NAME = 'Space-Xr';
 const urlsToCache = [
   'offline.html',
-  './index.html',
-  'spacex-stretch/public/logo192.png'
+  './index.html'
     ];
 
     const self = this;
