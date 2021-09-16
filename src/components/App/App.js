@@ -18,6 +18,7 @@ function App() {
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
+      .then(() => setHistory(checkFavorited(history)))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
@@ -30,22 +31,6 @@ function App() {
   useEffect(() => {
     fetchData();
   }, [])
-
-    //function to check localstorage, and if localstorage persist. check isFavorited against incoming ARTICLE?! WHAT?
-  //incoming articles have ids correct?
-  //checking ALL incoming articles for story.isFavorited === true {if so filter those against the story.id and replace the value to true}
-  //
-  // const checkLocalStorage = () => {
-  //   favoritesList.forEach(favStor => {
-  //     if(localStorage){
-  //       localStorage.filter(story => story.id === favStor.id)
-
-  //     }
-
-  //   })
-
-
-  // }
 
   const handleFavorite = (ID) => {
      history.find(story => story.id === ID ? story.isFavorited = true : false
