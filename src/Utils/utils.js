@@ -4,24 +4,17 @@ export const cleanData = (data) => {
     element.isFavorited = false
     return element
   })
-  return updatedData
-  // checkFavorited(updatedData)
+  return checkFavorited(updatedData)
 }
 
 export const checkFavorited = (data) => {
-  // console.log(localStorage, ' : localstorage');
  const keys = Object.keys(localStorage)
- console.log(data, ' :data in utils');
- console.log(keys, ' :keys in utils');
-  keys.map(key => { 
-    // console.log(key, 'key<<<<<<>>> single');
-    data.filter(history => {
-      // console.log(history.id, ' :histroy<<<');
-      if(history.id == key){
-        history.isFavorited = true
-        // console.log('testtter<<>>');
-      }
-  //     return history.id == key ? history.isFavorited : !history.isFavorited
-    })
-  })
-}
+  return data.reduce((arr, item) => {
+    if (keys.includes(item.id)) {
+      item.isFavorited = true;
+    }
+    arr.push(item)
+    return arr;
+  }, [])
+    
+  }
