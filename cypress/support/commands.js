@@ -1,4 +1,3 @@
-// 
 Cypress.Commands.add('loadRockets', (version, category) => {
   cy.intercept(`https://api.spacexdata.com/${version}/${category}`, {
     body: [
