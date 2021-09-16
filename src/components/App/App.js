@@ -10,6 +10,7 @@ import Error from '../Error/Error';
 import './App.css';
 import logo from '../../TheNXTfrontier.png'
 
+
 function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
