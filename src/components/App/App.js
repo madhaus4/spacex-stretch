@@ -18,7 +18,6 @@ function App() {
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
-      .then(() => checkFavorited(history))
       .catch(error => setError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
@@ -33,8 +32,9 @@ function App() {
   }, [])
 
   const handleFavorite = (ID) => {
-     history.find(story => story.id === ID ? story.isFavorited = true : false
-    )
+     const found = history.find(story => story.id === ID)
+     console.log(found, 'That is correct!')
+    found.isFavorited = !found.isFavorited
   }
 
   return (
