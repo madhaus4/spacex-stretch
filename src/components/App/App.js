@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
-import cleanData from '../../Utils/utils'
+import {cleanData, checkFavorited} from '../../Utils/utils'
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
@@ -30,6 +30,22 @@ function App() {
   useEffect(() => {
     fetchData();
   }, [])
+
+    //function to check localstorage, and if localstorage persist. check isFavorited against incoming ARTICLE?! WHAT?
+  //incoming articles have ids correct?
+  //checking ALL incoming articles for story.isFavorited === true {if so filter those against the story.id and replace the value to true}
+  //
+  // const checkLocalStorage = () => {
+  //   favoritesList.forEach(favStor => {
+  //     if(localStorage){
+  //       localStorage.filter(story => story.id === favStor.id)
+
+  //     }
+
+  //   })
+
+
+  // }
 
   const handleFavorite = (ID) => {
      history.find(story => story.id === ID ? story.isFavorited = true : false
