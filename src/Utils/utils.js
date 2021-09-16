@@ -11,12 +11,17 @@ export const cleanData = (data) => {
 export const checkFavorited = (data) => {
   // console.log(localStorage, ' : localstorage');
  const keys = Object.keys(localStorage)
-//  console.log(data, ' :data in utils');
-//  console.log(keys, ' :keys in utils');
+ console.log(data, ' :data in utils');
+ console.log(keys, ' :keys in utils');
   keys.map(key => { 
+    console.log(key, 'key<<<<<<>>> single');
     data.filter(history => {
-      console.log(history, ' :histroy<<<');
-      return history.id == key ? history.isFavorited : !history.isFavorited
+      console.log(history.id, ' :histroy<<<');
+      if(history.id == key){
+        history.isFavorited = true
+        console.log('testtter<<>>');
+      }
+  //     return history.id == key ? history.isFavorited : !history.isFavorited
     })
   })
 }
