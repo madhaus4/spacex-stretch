@@ -7,7 +7,6 @@ import unsavedIcon from '../../unsavedIcon.png';
 function HistoricalCards({ story, image, updateFavorites }) {
   // const [isFavorited, setIsFavorited] = useState(false)
 
-
   // const handleIcon = () => {
   //   setIsFavorited(!isFavorited)
   //   updateFavorites(story)

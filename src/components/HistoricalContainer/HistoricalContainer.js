@@ -5,7 +5,7 @@ import './HistoricalContainer.css';
 function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   const [favoritesList, setFavoritesList] = useState([])
   const [isFavoritedDisplayed, setisFavoritedDisplayed] = useState(false)
-  const [allArticles, setAllArticles] = useState([])
+
 
   const updateFavorites = (story) => {
     let foundFavorite = favoritesList.find(favorite => favorite.id === story.id)
@@ -32,6 +32,10 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
     saveFavoriteToStorage(newFavorite)
     setFavoritesList([...favoritesList, newFavorite])
   }
+
+  useEffect(() => {
+
+  }, [])
 
   const removeFromFavorites = (story) => {
     let itemsToKeep = favoritesList.filter(favorite => favorite.id !== story.id)
@@ -86,7 +90,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
         </button>
       </header>
       <div className='articles-wrapper'>
-        {!isFavoritedDisplayed && displayArticles( theHistory )}
+        {!isFavoritedDisplayed && displayArticles(theHistory)}
         {isFavoritedDisplayed && displayArticles(favoritesList)}
       </div>  
     </section>

@@ -25,5 +25,3 @@ export const checkFavorited = (data) => {
     })
   })
 }
-
-// export default cleanData, checkFavorited;
