@@ -14,8 +14,8 @@ function HistoricalCards({ story, image, updateFavorites }) {
 
   return (
     <article className='historical-card' id={story.id}>
-      <div className='img-wrapper'>
-        <img className='rocket-image' src={image} />
+      <div className='article-image-wrapper'>
+        <img className='article-image' src={image} />
       </div>
       <div className='info-wrapper'>
         <h3>{story.title}</h3>
