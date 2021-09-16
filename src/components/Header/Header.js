@@ -10,7 +10,7 @@ function Header(props) {
       <div className='links-container'>
         <NavLink to='/' 
           className='history-link'
-          >History
+          >Articles
         </NavLink>
         <NavLink to='/rockets' 
           className='rockets-link' 
