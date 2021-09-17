@@ -4,11 +4,10 @@
 
 .articles-container {
   height: fit-content;
-  /* width: 50vw; */
 }
 
 .articles-header {
-  width: 90%;
+  width: 85%;
   margin: 8% auto 1%;
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,18 @@
 }
 
 .toggle-view-btn {
-  padding: 1%;
+  padding: 1% 2.5%;
+  border: 3px solid white;
+  background: transparent;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.toggle-view-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
 }
 
 .articles-wrapper {
