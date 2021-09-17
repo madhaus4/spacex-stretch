@@ -88,16 +88,28 @@
 
 .animated-rocket-here {
   /* width: 25%; */
-  width: 60%;
+  width: 30%;
   height: 90vh;
   margin-bottom: 3vh;
   background: transparent;
 }
 
-.animated-rocket-here > img {
+.rocketship {
   height: 100%;
   width: auto;
   background: transparent;
 }
 
+.puffy-cloud {
+  margin-bottom: 7vh;
+  background: transparent;
+}
 
+
+.double-puff {
+  background: transparent;
+  z-index: 1;
+  position: relative;
+  left: -54%;
+  bottom: 31%;
+}
