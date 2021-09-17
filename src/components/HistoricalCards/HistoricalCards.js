@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HistoricalCards.css';
-import savedIcon from '../../savedIcon.png';
-import unsavedIcon from '../../unsavedIcon.png';
+import savedIcon from '../../images/saved-purple.png';
+import unsavedIcon from '../../images/unsaved-purple.png';
 
 
 function HistoricalCards({ story, image, updateFavorites }) {
