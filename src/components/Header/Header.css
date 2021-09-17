@@ -27,9 +27,11 @@
 
 .history-link,
 .rockets-link {
-  color: inherit;
+  color: #d7b9ff;
   text-decoration: none;
   padding: .5vh;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .history-link,
@@ -39,4 +41,6 @@
 
 /* .active {
   border-bottom: 3px solid orange;
+  font-weight: 600;
+  color: purple;
 } */
