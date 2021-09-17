@@ -10,10 +10,10 @@ function HomePage() {
   const smokeRef = useRef(null);
   const twoSmokeRef = useRef(null);
   
-  useEffect(() => {
+  useEffect(() => {    
     gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 4});
     gsap.to(smokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4});
-    gsap.to(twoSmokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4})
+    gsap.to(twoSmokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4});
   })
 
   return (
