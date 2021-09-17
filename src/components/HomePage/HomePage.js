@@ -4,11 +4,10 @@ import './HomePage.css';
 import rocket from '../../rocket.png'
 
 function HomePage() {
-  const rocketRef = useRef();
+  const  rocketRef = useRef(null);
   
   useEffect(() => {
-    console.log(rocketRef)
-    gsap.to(rocketRef.current,{rotation: 0, y: -1000, duration: 10});
+    gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10});
   })
 
   return (
