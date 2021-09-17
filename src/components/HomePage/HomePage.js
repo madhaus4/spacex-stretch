@@ -11,7 +11,7 @@ function HomePage() {
   const twoSmokeRef = useRef(null);
   
   useEffect(() => {
-    gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 0.75});
+    gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 4});
     // gsap.to(smokeRef.current, {rotation: -450, delay: 1})
   })
 
