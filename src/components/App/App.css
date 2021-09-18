@@ -35,3 +35,10 @@ footer > a {
   text-decoration: none;
   font-size: .75em;
 }
+
+.sparkling-star {
+  width: 10px;
+  background: transparent;
+  border: none;
+  /* height: 30px; */
+}
