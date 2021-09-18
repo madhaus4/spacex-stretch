@@ -23,12 +23,12 @@ describe('Rockets Page View', () => {
   })
 
   it('Should display all the information for a rocket card', () => {
-    cy.get('main').first().get('p').eq(0).should('contain', 'The Falcon 1 was an expendable launch system privately')
+    cy.get('article').first().get('p').eq(0).should('contain', 'The Falcon 1 was an expendable launch system privately')
     .get('main').first().get('p').eq(1).should('contain', '03/24/2006')
     .get('main').first().get('p').eq(2).should('contain', '6,700,000')
-    .get('main').first().get('p').eq(3).should('contain', '73')
-    .get('main').first().get('p').eq(4).should('contain', '5.5')
-    .get('main').first().get('p').eq(5).should('contain', '66,460')    
+    .get('main').first().get('h2').eq(0).should('contain', '73')
+    .get('main').first().get('h2').eq(1).should('contain', '66,460')
+    .get('main').first().get('h2').eq(2).should('contain', '5.5')    
   })
 
   it('Should display all the information for another card', () => {
