@@ -4,17 +4,32 @@ import './HomePage.css';
 import rocket from '../../images/rocket.png';
 import croppedcloud from '../../images/croppedcloud.png';
 import twoPuffyStuffs from '../../images/twoPuffyStuffs.png';
+import firstStar from '../../images/first-star.jpeg'
 
 function HomePage() {
   const rocketRef = useRef(null);
   const smokeRef = useRef(null);
   const twoSmokeRef = useRef(null);
+  const twinkleStar = useRef(null)
+
+//   CustomWiggle.create("random1", { wiggles: 50, type: "random" });
+
+// var star = document.querySelector(".star");
+
+// TweenLite.set(star, { scale: 0.5 });
+
+// var tl = new TimelineMax({ repeat: -1, })
+//   .to(star, 4, { scale: 1, ease: "random1" }, 0)
+//   .to(star, 4, { opacity: 1, ease: "random1" }, 0)
   
   useEffect(() => {    
+    gsap.CustomWiggle.create(twinkleStar.current, { wiggles: 10, type: 'random' })
     gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 4});
     gsap.to(smokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4, rotation: -180});
     gsap.to(twoSmokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4});
   })
+
+  
 
   return (
     <section className='page-title-container'>
@@ -23,6 +38,7 @@ function HomePage() {
         <p>The family of Falcon launch vehicles are the first and only orbital class rockets that are resuseable!  They are able to successfully land back on earth AND lower the cost of space access by being able to refly.   </p>
       </div>
       <div className='animated-rocket-here'>
+        <img src={firstStar}  ref={twinkleStar} alt='sparkling stars' className='sparkling-start' />
         <img src={rocket} alt='rocket' ref={rocketRef} className='rocketship'/>
         <img src={croppedcloud} alt='smokey-smoke' ref={smokeRef} className='puffy-cloud'/>
         <img src={twoPuffyStuffs} alt='extra-smoke' ref={twoSmokeRef} className='double-puff'/>
