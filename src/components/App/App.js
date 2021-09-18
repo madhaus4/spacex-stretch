@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Route, Switch } from 'react-router';
 import { getData } from '../../Utils/ApiCalls.js';
 import {cleanData, checkFavorited} from '../../Utils/utils'
@@ -9,14 +9,19 @@ import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
 import logo from '../../TheNXTfrontier.png'
+import star1 from '../../images/star1.png'
 import logoLight from '../../TheNXTfrontier-light.svg'
-
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+gsap.registerPlugin(CustomEase);
 
 function App() {
   const [history, setHistory] = useState([])
   const [rockets, setRockets] = useState([])
   const [launchImages, setLaunchImages] = useState([])
   const [error, setError] = useState('')
+  const twinkleStar = useRef(null)
+
 
   const fetchData = () => {
     getData('v4', 'history')
@@ -31,6 +36,8 @@ function App() {
   }
 
   useEffect(() => {
+    gsap.to(twinkleStar.current, { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+
     fetchData();
   }, [])
 
@@ -47,6 +54,8 @@ function App() {
         <Route exact path='/' render={() => 
           <>
             <HomePage />
+            <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' />
+
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
