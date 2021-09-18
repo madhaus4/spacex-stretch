@@ -35,14 +35,9 @@ describe('Rockets Page View', () => {
   it('Should display all the information for another card', () => {
     cy.get(':nth-child(2) > .card-body > .rocket-info > .description-wrapper > .description').should('contain', 'Falcon 9 is a two-stage rocket designed and')
     .get(':nth-child(2) > .card-body > .rocket-info > .description-wrapper > .details > .first-flight').should('contain', '06/04/2010')
+    .get(':nth-child(2) > .card-body > .rocket-info > .description-wrapper > .details > .flight-cost').should('contain', '50,000,000.00')
+    .get(':nth-child(2) > .card-body > .rocket-info > .measurements-wrapper > :nth-child(1) > .rocket-height').should('contain', '229.6')
+    .get(':nth-child(2) > .card-body > .rocket-info > .measurements-wrapper > :nth-child(2) > .rocket-mass').should('contain', '1,207,920')
+    .get(':nth-child(2) > .card-body > .rocket-info > .measurements-wrapper > :nth-child(3) > .rocket-diameter').should('contain', '12')
   })
-  // it('Should display all the information for another card', () => {
-  //   cy.get(':nth-child(2) > .card-body > .rocket-info > :nth-child(1) > .description').should('contain', 'Falcon 9 is a two-stage rocket designed and')
-  //   .get(':nth-child(2) > .card-body > .rocket-info > .details > .first-flight').should('contain','06/04/2010')
-  //   .get(':nth-child(2) > .card-body > .rocket-info > .details > .flight-cost').should('contain', '50,000,000.00')
-  //   .get(':nth-child(2) > .card-body > .rocket-info > .details > .rocket-height').should('contain','229.6')
-  //   .get(':nth-child(2) > .card-body > .rocket-info > .details > .rocket-diameter').should('contain','12')
-  //   .get(':nth-child(2) > .card-body > .rocket-info > .details > .rocket-mass').should('contain','1,207,920')
-  // })
-
 })
