@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 const RocketContainer = ({ theRockets }) => {
   const getRocketData = () => {
-    if (theRockets) { 
+    if (theRockets.length !== 0) { 
       return theRockets.map(rocket => (
        <RocketCards
          key={rocket.name}
