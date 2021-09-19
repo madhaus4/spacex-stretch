@@ -74,8 +74,8 @@
 
 .animated-rocket-here {
   /* width: 25%; */
-  width: 30%;
-  height: 90vh;
+  width: 50%;
+  height: 65vh;
   margin-bottom: 3vh;
   background: transparent;
 }
@@ -83,12 +83,16 @@
 .rocketship {
   height: 80%;
   width: auto;
+  padding: 0 30%;
   background: transparent;
 }
 
 .puffy-cloud {
-  margin-bottom: -11vh;
+  margin-bottom: -27%;
   background: transparent;
+
+  height: auto;
+  width: 19vw;
 }
 
 
@@ -96,8 +100,11 @@
   background: transparent;
   z-index: 1;
   position: relative;
-  left: -54%;
-  bottom: 12%;
+  left: -20%;
+  bottom: 11%;
+
+  height: auto;
+  width: 46vw;
 }
 
 
@@ -126,5 +133,19 @@
   .animated-rocket-here {
     height: 100%;
   }
+
+  .rocketship {}
+
+  .puffy-cloud {
+    height: 15vh;
+    width: auto;
+  }
+
+  .double-puff {
+    /* height: 13vh;
+    width: auto;
+    left: -200px; */
+  }
+
 
 }
