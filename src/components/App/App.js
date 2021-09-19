@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 import { getData } from '../../Utils/ApiCalls.js';
-import {cleanData, checkFavorited} from '../../Utils/utils'
+import { cleanData } from '../../Utils/utils'
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
