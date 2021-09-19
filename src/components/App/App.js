@@ -109,7 +109,7 @@ function App() {
         </Link>
         <p></p>
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
-      </footer>
+        </footer>
     </main>
     </>
   );
