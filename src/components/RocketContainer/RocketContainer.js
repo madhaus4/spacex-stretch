@@ -19,7 +19,8 @@ const RocketContainer = ({ theRockets }) => {
   ))
 
   return(
-    <section className='rocket-container'>     
+    <section className='rocket-container'>  
+      {theRockets.length === 0 && <h2>Loading Error. Please refresh and try again.</h2>}   
       {allRockets}     
     </section>
   )
