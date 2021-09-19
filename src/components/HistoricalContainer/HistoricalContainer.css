@@ -46,6 +46,7 @@
 
   .articles-header {
     height: 15vh;
+    margin: 33% auto 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -56,8 +57,4 @@
     font-size: 1.3em;
   }
 
-  .articles-wrapper {
-
-  }
-  
 }
