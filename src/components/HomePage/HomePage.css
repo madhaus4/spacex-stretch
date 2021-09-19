@@ -85,14 +85,19 @@
   width: auto;
   padding: 0 30%;
   background: transparent;
+  position: relative;
+  top: 25%;
 }
 
 .puffy-cloud {
-  margin-bottom: -27%;
+  /* margin-bottom: -27%; */
   background: transparent;
 
   height: auto;
   width: 19vw;
+  position: relative;
+  left: 35%;
+  bottom: 10%;
 }
 
 
@@ -100,7 +105,7 @@
   background: transparent;
   z-index: 1;
   position: relative;
-  left: -20%;
+  left: -15%;
   bottom: 11%;
 
   height: auto;
@@ -114,12 +119,13 @@
 @media screen and (max-width: 500px) {
 
   .page-title-container {
-
+    align-items: flex-start;
+    justify-content: center;
   }
 
   
   .page-details {
-    
+    margin: 15px 0;
   }
 
   .page-details > p {
@@ -134,17 +140,21 @@
     height: 100%;
   }
 
-  .rocketship {}
+  .rocketship {
+    height: 55%;
+    top: 43%;
+  }
 
   .puffy-cloud {
-    height: 15vh;
-    width: auto;
+    width: 22vw;
+    left: 36%;
+    bottom: -33%;
   }
 
   .double-puff {
-    /* height: 13vh;
-    width: auto;
-    left: -200px; */
+    width: 58vw;
+    left: -30%;
+    bottom: -19%;
   }
 
 
