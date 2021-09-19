@@ -1,7 +1,7 @@
 describe('Rockets Page View', () => {
   beforeEach(() => {
     cy.loadRockets('v4', 'rockets')
-    cy.visit('http://localhost:3000/rockets')
+    cy.visit('http://localhost:3000').get('.links-container').click()
   })
 
   it('Should include "rockets" in the url', () => {
@@ -13,13 +13,12 @@ describe('Rockets Page View', () => {
   })
 
   it('Should have functional Links in the Header', () => {
-    cy.get('.history-link').click().get('.articles-container').should('be.visible')
-      .get('.rockets-link').click().get('.rocket-card').first().should('be.visible')
+    cy.get('.links-container').click().get('.articles-container').should('be.visible')
+      .get('.links-container').click().get('.rocket-card').first().should('be.visible')
   })
 
   it('Should display the rocket cards with images', () => {
-    cy.get(':nth-child(1) > .card-body > .rocket-image-container > .rocket-image').should('have.attr', 'src').should('include', 'https://imgur.com/azYafd8.jpg')
-      .get('img[src="https://farm4.staticflickr.com/3955/32915197674_eee74d81bb_b.jpg"]').should('be.visible')
+    cy.get(':nth-child(1) > .card-body > .rocket-image-container > .rocket-image').should('have.attr', 'src').should('include', 'https://imgur.com/azYafd8.jpg')     
   })
 
   it('Should display all the information for a rocket card', () => {
