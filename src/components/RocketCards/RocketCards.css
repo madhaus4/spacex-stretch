@@ -127,7 +127,59 @@ span {
 
 
 
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 500px) {
+
+  .rocket-card {
+    height: 88vh;
+  }
+
+  .rocket-name {
+    height: 8%;
+  }
+
+  .card-body {
+    height: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rocket-image-container {
+    width: auto;
+  }
+
+  .rocket-info {
+    width: 100%;
+    /* font-size: smaller; */
+    justify-content: space-evenly;
+  }
+
+  .description-wrapper {
+    height: auto;
+    padding: 4% 1%;
+  }
+
+  .description-wrapper > p {
+    font-size: 1em;
+  }
+
+  .measurements-wrapper {
+    height: auto;
+    width: auto;
+    padding: 0 2% 2%;
+    /* margin: 2%; */
+  }
+
+  .measurements {
+    height: 100px;
+    width: 100px;
+  }
+
+  .measurements > h2 {
+    font-size: .9em;
+
+  }
+
+}
 
 
 
