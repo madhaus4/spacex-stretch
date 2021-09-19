@@ -29,15 +29,22 @@ function App() {
   
   
   const fetchData = () => {
-    getData('v4', 'history')
+    getData('v12', 'history')
       .then(data => setHistory(cleanData(data)))
-      .catch(error => setError(error))
+      // .catch(error => setError(error.status))
+      .catch(error => displayError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
       .catch(error => setError(error))
     getData('v5', 'launches')
       .then(data => setLaunchImages([...data[19].links.flickr.original, data[21].links.flickr.original]))
       .catch(error => setError(error))
+  }
+
+  const displayError = (response) => {
+    const errorCode = response.status;
+    console.log(errorCode)
+    setError(errorCode)
   }
 
   useEffect(() => {
@@ -101,5 +108,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
