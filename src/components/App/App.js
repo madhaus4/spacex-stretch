@@ -90,7 +90,6 @@ function App() {
           <div>
             <HomePage />
             {/* <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' /> */}
-
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}

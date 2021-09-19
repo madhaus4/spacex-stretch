@@ -90,6 +90,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
           >{isFavoritedDisplayed ? 'View All' : 'My Reading List'}
         </button>
       </header>
+      {theHistory.length === 0 && <h2>Loading error. Please try again</h2>}
       <div className='articles-wrapper'>
         {!isFavoritedDisplayed && displayArticles(theHistory)}
         {isFavoritedDisplayed && displayArticles(favoritesList)}
