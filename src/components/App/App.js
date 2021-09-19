@@ -49,12 +49,26 @@ function App() {
 
   return (
     <main>
+      <div className='star-container'>
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
+        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
+      </div>
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
           <>
             <HomePage />
-            <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' />
+            {/* <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' /> */}
 
             <HistoricalContainer 
               theHistory={history} 
