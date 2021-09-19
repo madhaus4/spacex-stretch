@@ -79,7 +79,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
       /> 
     ))
 
-    if(cards.length === 0) {
+    if(cards.length === 0 && dataSet === favoritesList) {
       return <h2>Nothing bookmarked yet. Checkout the articles!</h2>
     } else {
       return cards
