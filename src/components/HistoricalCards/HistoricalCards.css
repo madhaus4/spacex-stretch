@@ -61,3 +61,48 @@
 .favorite-btn:hover {
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 500px) {
+
+  .historical-card {
+    margin: 5%;
+    height: 50vh;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+  }
+
+  .article-image-wrapper {
+    height: 21vh;
+    width: 92%;
+    padding-top: 3%;
+  }
+
+  .article-image {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .info-wrapper {
+    width: 93%;
+    height: 27vh;
+    padding: 7px;
+  }
+
+  .info-wrapper > h3 {
+    font-size: 1.1em;
+    width: 80%;
+  }
+
+  .info-wrapper > p {
+    height: 55%;
+  }
+
+  .favorite-btn {
+    height: 25px;
+    width: 25px;
+    top: -45%;
+    left: 85%;
+  }
+
+}
