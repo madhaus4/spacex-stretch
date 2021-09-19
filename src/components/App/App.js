@@ -31,7 +31,7 @@ function App() {
   const fetchData = () => {
     getData('v12', 'history')
       .then(data => setHistory(cleanData(data)))
-      // .catch(error => setError(error.status))
+      .catch(error => setError(error.status))
       .catch(error => displayError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
