@@ -35,8 +35,7 @@ function App() {
   }, [])
 
   const handleFavorite = (ID) => {
-     const found = history.find(story => story.id === ID)
-     console.log(found, 'That is correct!')
+    const found = history.find(story => story.id === ID)
     found.isFavorited = !found.isFavorited
   }
 
@@ -45,14 +44,14 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
-          <>
+          <div>
             <HomePage />
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
               handleFavorite={handleFavorite}
               /> 
-          </>  
+          </div>  
         } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
