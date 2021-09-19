@@ -23,8 +23,9 @@ function App() {
   const twinkleStar = useRef(null)
   
   let tl1 = gsap.timeline({repeat: 2, repeatDelay: 1 });
-  let tl2 = gsap.timeline({repeat: 2, repeatDelay: 1 });
-  let tl3 = gsap.timeline({repeat: 2, repeatDelay: 1 });
+  // let tl2 = gsap.timeline({repeat: 2, repeatDelay: 2 });
+  // let tl3 = gsap.timeline({repeat: 2, repeatDelay: 3});
+  // let tl4 = gsap.timeline({repeat: 2, repeatDelay: 4 });
   
   
   const fetchData = () => {
@@ -40,9 +41,10 @@ function App() {
   }
 
   useEffect(() => {
-    tl1.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
-    tl2.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
-    tl3.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    tl1.to('.star', { duration: 3, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    // tl1.to('.star2', { duration: 2, scale:3, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    // tl1.to('.star3', { duration: 1, scale:5, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    // tl1.to('.star4', { duration: 2, scale:5, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
     console.log(twinkleStar, ' :twinklestar')
     fetchData();
   }, [])
@@ -56,17 +58,19 @@ function App() {
   return (
     <>
     <div className='star-container'>
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star4' />
-      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star4' />
+      <img src={star1}  id='twinkle1' ref={twinkleStar} alt='sparkling stars' className='star1 star sparkling-star1' />
+      <img src={star1}  id='twinkle2' ref={twinkleStar} alt='sparkling stars' className='star1 star sparkling-star2' />
+      <img src={star1}  id='twinkle3' ref={twinkleStar} alt='sparkling stars' className='star1 star sparkling-star4' />
+      <img src={star1}  id='twinkle4' ref={twinkleStar} alt='sparkling stars' className='star2 star sparkling-star2' />
+      <img src={star1}  id='twinkle5' ref={twinkleStar} alt='sparkling stars' className='star2 star sparkling-star4' />
+      <img src={star1}  id='twinkle6' ref={twinkleStar} alt='sparkling stars' className='star2 star sparkling-star3' />
+      <img src={star1}  id='twinkle7' ref={twinkleStar} alt='sparkling stars' className='star2 star sparkling-star2' />
+      <img src={star1}  id='twinkle8' ref={twinkleStar} alt='sparkling stars' className='star3 star sparkling-star3' />
+      <img src={star1}  id='twinkle9' ref={twinkleStar} alt='sparkling stars' className='star3 star sparkling-star1' />
+      <img src={star1}  id='twinkle10' ref={twinkleStar} alt='sparkling stars' className='star3 star sparkling-star3' />
+      <img src={star1}  id='twinkle11' ref={twinkleStar} alt='sparkling stars' className='star4 star sparkling-star4' />
+      <img src={star1}  id='twinkle12' ref={twinkleStar} alt='sparkling stars' className='star4 star sparkling-star2' />
+      <img src={star1}  id='twinkle13' ref={twinkleStar} alt='sparkling stars' className='star4 star sparkling-star4' />
     </div>
     <main>
       <Header />
