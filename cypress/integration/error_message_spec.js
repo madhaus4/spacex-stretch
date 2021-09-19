@@ -27,6 +27,10 @@ describe('Dashboard Page View', () => {
   })
 
   it('Should display an error if the rocket information did not load properly', () => {
-    
+    cy.intercept('https://api.spacexdata.com/v4/rockets', {
+      statusCode: 404
+    })
+    cy.visit('http://localhost:3000/rockets')
+      .get('h2').should('contain', 'Loading Error. Please refresh and try again')
   })
 })
