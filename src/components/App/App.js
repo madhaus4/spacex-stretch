@@ -9,7 +9,7 @@ import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
-import logo from '../../TheNXTfrontier.png'
+// import logo from '../../TheNXTfrontier.png'
 import star1 from '../../images/star1.png'
 import logoLight from '../../TheNXTfrontier-light.svg'
 import { gsap } from "gsap";

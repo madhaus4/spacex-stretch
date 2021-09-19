@@ -68,7 +68,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   }
 
   const displayArticles = (dataSet) => {
-    return dataSet.filter(story => {
+    const cards =  dataSet.filter(story => {
       return story.links.article && !story.links.article.includes('www.spacex.com')})
       .map((story, i) => (
       <HistoricalCards 
@@ -78,6 +78,12 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
         updateFavorites={updateFavorites}
       /> 
     ))
+
+    if(cards.length === 0) {
+      return <h2>Nothing bookmarked yet. Checkout the articles!</h2>
+    } else {
+      return cards
+    }
   }
     
   return(
