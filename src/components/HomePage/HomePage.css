@@ -113,3 +113,10 @@
   left: -54%;
   bottom: 12%;
 }
+
+.sparkling-star {
+  width: 10px;
+  background: transparent;
+  border: none;
+  /* height: 30px; */
+}

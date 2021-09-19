@@ -1,12 +1,14 @@
 * {
   /* background-color: #112947; */
   color: white;
-  background-image: url('../../starBackground.webp')
+  /* background-image: url('../../starBackground.webp') */
 }
 
 main {
   width: 100%;
   height: 100%;
+  z-index: 2;
+  position: absolute;
 }
 
 footer {
@@ -35,3 +37,39 @@ footer > a {
   text-decoration: none;
   font-size: .75em;
 }
+
+.star-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 30vw;
+  width: 80vw;
+  z-index: 1;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+.sparkling-star1 {
+  width: 10px;
+  background: transparent;
+  border: none;
+}
+.sparkling-star2 {
+  width: 40px;
+  background: transparent;
+  border: none;
+}
+.sparkling-star3 {
+  width: 10px;
+  background: transparent;
+  border: none;
+}
+.sparkling-star4 {
+  width: 10px;
+  background: transparent;
+  border: none;
+}
+/* .star {
+  width: 30px;
+} */
