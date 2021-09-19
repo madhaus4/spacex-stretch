@@ -8,4 +8,10 @@
 }
 
 
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 500px) {
+  
+  .rocket-container {
+    margin: 12% auto;
+  }
+
+}
