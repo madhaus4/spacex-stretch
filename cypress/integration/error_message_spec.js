@@ -1,9 +1,4 @@
 describe('Dashboard Page View', () => {
-  // beforeEach(() => {
-  //   cy.loadArticles('v4', 'history')
-  //   cy.loadImages('v5', 'launches')
-  //   cy.visit('http://localhost:3000')
-  // })
 
   it('Should let the user know if there was an error with the url address', () => {
     cy.visit('http://localhost:3000/hotdog')

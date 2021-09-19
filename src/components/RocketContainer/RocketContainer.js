@@ -4,7 +4,6 @@ import RocketCards from '../RocketCards/RocketCards'
 import dayjs from 'dayjs';
 
 const RocketContainer = ({ theRockets }) => {
-  console.log(theRockets)
   const getRocketData = () => {
     if (theRockets) { 
       return theRockets.map(rocket => (
@@ -21,7 +20,7 @@ const RocketContainer = ({ theRockets }) => {
        />
      )) 
       } else {
-       return <h2>Loading Error. Please refresh and try again.</h2>
+       return <h2>Loading Error. Please try again.</h2>
      }
   }
 

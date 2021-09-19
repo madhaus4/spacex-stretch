@@ -4,11 +4,10 @@ import { muskQuotes } from '../../Utils/muskQuotes';
 
 const Error = () => {
 
-const randomizeMusk = () => {
-const randomIndex =  Math.floor(Math.random() * muskQuotes.length);
-return muskQuotes[randomIndex]
-
-}
+  const randomizeMusk = () => {
+    const randomIndex =  Math.floor(Math.random() * muskQuotes.length);
+    return muskQuotes[randomIndex]
+  }
 
 
   return (
