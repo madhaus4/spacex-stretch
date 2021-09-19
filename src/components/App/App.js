@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Route, Switch } from 'react-router';
+import { Link } from 'react-router-dom';
 import { getData } from '../../Utils/ApiCalls.js';
-import {cleanData, checkFavorited} from '../../Utils/utils'
+import { cleanData } from '../../Utils/utils'
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
@@ -21,6 +22,7 @@ function App() {
   const [launchImages, setLaunchImages] = useState([])
   const [error, setError] = useState('')
   const twinkleStar = useRef(null)
+
   
   let tl1 = gsap.timeline({repeat: 2, repeatDelay: 1 });
   // let tl2 = gsap.timeline({repeat: 2, repeatDelay: 2 });
@@ -48,6 +50,9 @@ function App() {
     console.log(twinkleStar, ' :twinklestar')
     fetchData();
   }, [])
+
+
+
 
   const handleFavorite = (ID) => {
     const found = history.find(story => story.id === ID)
@@ -93,7 +98,14 @@ function App() {
         <Route render={() => <Error />} />
       </Switch>
       <footer>
-        <img src={logoLight} alt='the NXT frontier logo' />
+        <Link to='/'
+          onClick={() => {
+            window.location.reload();
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logoLight} alt='the NXT frontier logo' className='footer-logo' />
+        </Link>
         <p></p>
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
       </footer>
