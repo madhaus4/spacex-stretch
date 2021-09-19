@@ -126,11 +126,51 @@ span {
 
 
 
+@media screen and (max-width: 1250px) {
+  .measurements {
+    height: 125px;
+    width: 125px;
+  }
+}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1120px) {
+  .measurements-wrapper {
+    margin-bottom: 2%;
+  }
 
+  .measurements {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .description-wrapper {
+    font-size: .9em;
+  }
+
+  .measurements-wrapper {
+    margin-bottom: -5%;
+  }
+
+  .measurements {
+    height: 95px;
+    width: 95px;
+  }
+
+  .measurements > h2 {
+    font-size: .85em;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
   .rocket-card {
-    height: 88vh;
+    height: 90vh;
   }
 
   .rocket-name {
@@ -138,18 +178,19 @@ span {
   }
 
   .card-body {
-    height: 95%;
+    height: 90%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .rocket-image-container {
+    height: auto;
     width: auto;
   }
 
   .rocket-info {
     width: 100%;
-    /* font-size: smaller; */
     justify-content: space-evenly;
   }
 
@@ -166,7 +207,6 @@ span {
     height: auto;
     width: auto;
     padding: 0 2% 2%;
-    /* margin: 2%; */
   }
 
   .measurements {
@@ -176,7 +216,40 @@ span {
 
   .measurements > h2 {
     font-size: .9em;
+  }
 
+}
+
+
+@media screen and (max-width: 550px) {
+  .rocket-name {
+    height: 7%;
+    font-size: 1.3em;
+  }
+
+  .rocket-image-container {
+    height: 35vh;
+    width: 100%;
+  }
+
+  .rocket-info {
+    height: 60%;
+  }
+
+  .description-wrapper {
+    padding: 4% 1% 1%;
+    font-size: small;
+  }
+
+  .measurements {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 0;
+    font-size: .9em;
+  }
+
+  .measurements > h2 {
+    font-size: .75em;  
   }
 
 }
