@@ -6,3 +6,12 @@
   flex-direction: column;
   align-items: center;
 }
+
+
+@media screen and (max-width: 500px) {
+  
+  .rocket-container {
+    margin: 12% auto;
+  }
+
+}

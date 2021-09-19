@@ -44,3 +44,25 @@
   font-weight: 600;
   color: purple;
 } */
+
+
+@media screen and (max-width: 500px) {
+
+  .nav-bar {
+    width: 100%;
+    margin: 0;
+    justify-content: none;
+  }
+
+  .logo {
+    height: 110%;
+    padding: 0 15px;
+    margin-bottom: -2%;
+  }
+
+  .links-container {
+    width: 60%;
+    padding: 0 15px;
+  }
+  
+}
