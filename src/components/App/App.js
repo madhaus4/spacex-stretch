@@ -21,8 +21,12 @@ function App() {
   const [launchImages, setLaunchImages] = useState([])
   const [error, setError] = useState('')
   const twinkleStar = useRef(null)
-
-
+  
+  let tl1 = gsap.timeline({repeat: 2, repeatDelay: 1 });
+  let tl2 = gsap.timeline({repeat: 2, repeatDelay: 1 });
+  let tl3 = gsap.timeline({repeat: 2, repeatDelay: 1 });
+  
+  
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
@@ -36,8 +40,10 @@ function App() {
   }
 
   useEffect(() => {
-    gsap.to(twinkleStar.current, { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
-
+    tl1.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    tl2.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    tl3.to('.star', { duration: .5, scale:7, ease: "slow(0.7, 2, false)", repeat:-1, yoyo:true})
+    console.log(twinkleStar, ' :twinklestar')
     fetchData();
   }, [])
 
@@ -48,21 +54,21 @@ function App() {
   }
 
   return (
+    <>
+    <div className='star-container'>
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star1' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star2' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star3' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star4' />
+      <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='star sparkling-star4' />
+    </div>
     <main>
-      <div className='star-container'>
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star1' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star2' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star3' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
-        <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star4' />
-      </div>
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
@@ -89,6 +95,7 @@ function App() {
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
       </footer>
     </main>
+    </>
   );
 }
 
