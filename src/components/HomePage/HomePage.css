@@ -100,6 +100,12 @@
   bottom: 4%;
 }
 
+.sparkling-star {
+  width: 10px;
+  background: transparent;
+  border: none;
+  /* height: 30px; */
+}
 
 .double-puff {
   background: transparent;
@@ -156,6 +162,8 @@
     left: -30%;
     bottom: -19%;
   }
-
-
+/* 
+  left: -54%;
+  bottom: 12%; */
 }
+
