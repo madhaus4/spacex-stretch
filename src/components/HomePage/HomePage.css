@@ -94,10 +94,10 @@
   background: transparent;
 
   height: auto;
-  width: 19vw;
+  width: 17vw;
   position: relative;
-  left: 35%;
-  bottom: 10%;
+  left: 36%;
+  bottom: 4%;
 }
 
 
@@ -106,10 +106,10 @@
   z-index: 1;
   position: relative;
   left: -15%;
-  bottom: 11%;
+  bottom: 36%;
 
   height: auto;
-  width: 46vw;
+  width: 45vw;
 }
 
 
