@@ -20,7 +20,7 @@
 ---
 
 ### Summary
-This application is built for users to learn more about SpaceX rockets and their history. When the user visits the website, the main page will include a rocket animation and an introduction to what the page is about. From there, if the user scrolls down, they can view a variety of news articles regarding SpaceX. There is an opportunity for the user to bookmark specific articles and store them for later reading to re-visit. The logo at the bottom of the page will return the user to the top of the home page. 
+This application was built for users to learn more about SpaceX rockets and their history. When the user visits the website, the main page will include a rocket animation and an introduction to what the page is about. From there, if the user scrolls down, they can view a variety of news articles regarding SpaceX. There is an opportunity for the user to bookmark specific articles and store them for later reading to re-visit. The logo at the bottom of the page will return the user to the top of the home page. 
 
 When the user selects "Rockets" from the navigation bar, they will be taken to a page dedicated to the four SpaceX rockets that includes details about each of the rockets. The user can return home by either selecting the "Home" option in navigation or clicking the logo at the bottom of the page. 
 
