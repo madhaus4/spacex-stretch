@@ -1,6 +1,6 @@
 <div align="center"><img src="" height="150px" width="150px" alt="logo"/><h1>The NXT Frontier</h1>
 <p>Description</p>
-<a>View Deployed Site Here</a>
+<a href="https://nxtfrontier.netlify.app/">View Deployed Site Here</a>
 </div>
 
 
@@ -46,7 +46,7 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 
 
 ### Preview
-
+- 
 
 
 [Return to top](#spacex-stretch)
