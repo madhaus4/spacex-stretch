@@ -80,7 +80,7 @@ function App() {
       <img src={star1}  id='twinkle14' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star5' />
       <img src={star1}  id='twinkle15' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star4' />
       <img src={star1}  id='twinkle16' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star3' />
-      <img src={star1}  id='twinkle17' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star2' />
+      {/* <img src={star1}  id='twinkle17' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star2' /> */}
     </div>
     <main>
       <Header />
