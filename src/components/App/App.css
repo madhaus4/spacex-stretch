@@ -1,7 +1,5 @@
 * {
-  /* background-color: #112947; */
   color: white;
-  /* background-image: url('../../starBackground.webp') */
 }
 
 main {
@@ -55,18 +53,7 @@ footer > a {
   height: 100%;
   width: 100%;
   margin: 0 10%;
-  /* display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-around;
-  align-items: center;
-  */
 }
-
-/* .star {
-  width: 10rem;
-  height: 10rem;
-} */
 
 .sparkling-star1 {
   width: 5px;
@@ -95,9 +82,6 @@ footer > a {
   border: none;
   margin: 10rem 0 0 10rem;
 }
-/* .star {
-  width: 30px;
-} */
 
 @media screen and (max-width: 500px) {
   main {
