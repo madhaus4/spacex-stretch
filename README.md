@@ -52,7 +52,9 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 
 
 ### Future Features & Noteworthy Limitations
-- 
+- Add more pages for the user to visit. Including pages about launch information, crew, and other SpaceX information will help round out the user experience. 
+- Include more animations such as a comet or shooting star 
+- Improve the styling of the navigation buttons for more specific indications for which page is currently visible. 
 
 
 ### Preview
@@ -63,15 +65,15 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 ---
 
 ### Organizational Tools
-##### * [Find Project Spec Here]()
-##### * [GitHub Project Board]()
-##### * [Wireframe]()
-##### * [Inspiration Board]()
+##### * [Find Project Spec Here](https://frontend.turing.edu/projects/module-3/stretch.html)
+##### * [GitHub Project Board](https://github.com/madhaus4/spacex-stretch/projects/1)
+##### * [Wireframe](https://www.figma.com/file/SsEdk6veCtktP7uK2C5RVx/Space-X-Stretch?node-id=0%3A1)
+##### * [Inspiration Board](https://www.notion.so/Inspiration-Board-d0800da793b84a3695811c45d72b800f)
 
 ---
 
 ### Reflection
-   
+- 
 <br>
 
 
