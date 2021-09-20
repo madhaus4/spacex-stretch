@@ -21,7 +21,7 @@ footer {
   text-align: center;
 }
 
-footer > img {
+.footer-logo {
   height: 14vh;
   width: auto;
 }

@@ -68,7 +68,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
   }
 
   const displayArticles = (dataSet) => {
-    return dataSet.filter(story => {
+    const cards =  dataSet.filter(story => {
       return story.links.article && !story.links.article.includes('www.spacex.com')})
       .map((story, i) => (
       <HistoricalCards 
@@ -78,6 +78,12 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
         updateFavorites={updateFavorites}
       /> 
     ))
+
+    if(cards.length === 0 && dataSet === favoritesList) {
+      return <h2>Nothing bookmarked yet. Checkout the articles!</h2>
+    } else {
+      return cards
+    }
   }
     
   return(
@@ -90,6 +96,7 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
           >{isFavoritedDisplayed ? 'View All' : 'My Reading List'}
         </button>
       </header>
+      {theHistory.length === 0 && <h2 className='article-error-msg'>Loading error. Please try again</h2>}
       <div className='articles-wrapper'>
         {!isFavoritedDisplayed && displayArticles(theHistory)}
         {isFavoritedDisplayed && displayArticles(favoritesList)}

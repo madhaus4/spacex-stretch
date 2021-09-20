@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Route, Switch } from 'react-router';
+import { Link } from 'react-router-dom';
 import { getData } from '../../Utils/ApiCalls.js';
-import {cleanData, checkFavorited} from '../../Utils/utils'
+import { cleanData } from '../../Utils/utils'
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
 import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
@@ -23,19 +24,27 @@ function App() {
   const [launchImages, setLaunchImages] = useState([])
   const [error, setError] = useState('')
   const twinkleStar = useRef(null)
+
   
   let tl1 = gsap.timeline();
   
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
-      .catch(error => setError(error))
+      .catch(error => setError(error.status))
+      .catch(error => displayError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
       .catch(error => setError(error))
     getData('v5', 'launches')
       .then(data => setLaunchImages([...data[19].links.flickr.original, data[21].links.flickr.original]))
       .catch(error => setError(error))
+  }
+
+  const displayError = (response) => {
+    const errorCode = response.status;
+    console.log(errorCode)
+    setError(errorCode)
   }
 
   useEffect(() => {
@@ -48,9 +57,11 @@ function App() {
     fetchData();
   }, [])
 
+
+
+
   const handleFavorite = (ID) => {
-     const found = history.find(story => story.id === ID)
-     console.log(found, 'That is correct!')
+    const found = history.find(story => story.id === ID)
     found.isFavorited = !found.isFavorited
   }
 
@@ -78,14 +89,14 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' render={() => 
-          <>
+          <div>
             <HomePage />
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
               handleFavorite={handleFavorite}
               /> 
-          </>  
+          </div>  
         } />
         <Route exact path='/rockets' render={() => <RocketContainer 
             theRockets={rockets} 
@@ -94,13 +105,21 @@ function App() {
         <Route render={() => <Error />} />
       </Switch>
       <footer>
-        <img src={logoLight} alt='the NXT frontier logo' />
+        <Link to='/'
+          onClick={() => {
+            window.location.reload();
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logoLight} alt='the NXT frontier logo' className='footer-logo' />
+        </Link>
         <p></p>
         <a href='https://www.spacex.com/'>Please visit the SpaceX website for more information</a>
-      </footer>
+        </footer>
     </main>
     </>
   );
 }
+
 
 export default App;
