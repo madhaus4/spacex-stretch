@@ -1,4 +1,3 @@
-//need to check if any have the isFavorited === true, if so, return those over the false statement. 
 export const cleanData = (data) => {
    const updatedData = data.map(element => {
     element.isFavorited = false
