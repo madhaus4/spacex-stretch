@@ -41,7 +41,7 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 5. Paste this: ```http://localhost:3000/``` into your browser
 
 
-[Return to top](#spacex-stretch)
+[Return to top](#The-NXT-Frontier)
 
 ### Current Features
 - User's bookmarked articles will persist on reload with implemented localStorage for an enhanced user experience. 
@@ -63,7 +63,7 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 
 
 
-[Return to top](#spacex-stretch)
+[Return to top](#The-NXT-Frontier)
 ---
 
 ### Organizational Tools
