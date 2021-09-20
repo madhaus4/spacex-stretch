@@ -1,0 +1,45 @@
+.error-handling {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-heading,
+.error-msg {
+  margin-bottom: 5%;
+}
+
+.error-heading {
+  font-size: 2em;
+}
+
+.error-msg {
+  font-size: 1.25em;
+}
+
+.musk-wisdom {
+  font-size: .75em;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .error-heading {
+    font-size: 1.75;
+    margin: 5%;
+  }
+
+  .error-msg {
+    font-size: 1em;
+    margin: 5%;
+  }
+
+  .musk-wisdom {
+    width: 80%;
+  }
+
+}
