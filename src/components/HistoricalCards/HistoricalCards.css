@@ -69,7 +69,6 @@
     margin: 5%;
     height: 50vh;
     flex-direction: column;
-    /* justify-content: space-evenly; */
   }
 
   .article-image-wrapper {
