@@ -28,10 +28,9 @@ function HomePage() {
 //   .to(star, 4, { opacity: 1, ease: "random1" }, 0)
   
 useEffect(() => {    
-    // gsap.to(twinkleStar.current, { duration: 2.5, scale:2, ease: "slow(0.7, 2, false)" })
-    gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 4});
-    gsap.to(smokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4, rotation: -180});
-    gsap.to(twoSmokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4});
+    gsap.to(rocketRef.current,{rotation: -50, y: -1000, x: -800, duration: 10, delay: 4, repeat: -1});
+    gsap.to(smokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4, rotation: -180, repeat: -1, repeatDelay:7.15});
+    gsap.to(twoSmokeRef.current, {duration: 3, scale: 2, ease: 'forward', opacity: 0, delay: 4, repeat: -1, repeatDelay:7.15});
   })
 
   
