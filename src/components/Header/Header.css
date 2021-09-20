@@ -10,7 +10,6 @@
 
 .logo {
   width: auto;
-  /* height: 110%; */
 
   height: 180%;
   padding: 4px;
@@ -39,13 +38,6 @@
   cursor: pointer;
 }
 
-/* .active {
-  border-bottom: 3px solid orange;
-  font-weight: 600;
-  color: purple;
-} */
-
-
 @media screen and (max-width: 500px) {
 
   .nav-bar {
@@ -64,5 +56,4 @@
     width: 60%;
     padding: 0 15px;
   }
-  
 }
