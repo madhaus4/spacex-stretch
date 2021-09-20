@@ -8,11 +8,10 @@ import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
-import logo from '../../TheNXTfrontier.png'
 import star1 from '../../images/star1.png'
 import logoLight from '../../TheNXTfrontier-light.svg'
 import { gsap } from "gsap";
-import { CustomEase, Strong } from "gsap/CustomEase";
+import { CustomEase } from "gsap/CustomEase";
 import { RoughEase } from "gsap/EasePack";
 
 gsap.registerPlugin(CustomEase);
@@ -26,10 +25,6 @@ function App() {
   const twinkleStar = useRef(null)
   
   let tl1 = gsap.timeline();
-  // let tl2 = gsap.timeline({repeat: 2, repeatDelay: 2 });
-  // let tl3 = gsap.timeline({repeat: 2, repeatDelay: 3});
-  // let tl4 = gsap.timeline({repeat: 2, repeatDelay: 4 });
-  
   
   const fetchData = () => {
     getData('v4', 'history')
@@ -52,8 +47,6 @@ function App() {
     console.log(twinkleStar, ' :twinklestar')
     fetchData();
   }, [])
-
-//   "elastic.out( 2.5,0.3)"
 
   const handleFavorite = (ID) => {
      const found = history.find(story => story.id === ID)
@@ -80,7 +73,6 @@ function App() {
       <img src={star1}  id='twinkle14' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star5' />
       <img src={star1}  id='twinkle15' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star4' />
       <img src={star1}  id='twinkle16' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star3' />
-      {/* <img src={star1}  id='twinkle17' ref={twinkleStar} alt='sparkling stars' className='star5 star sparkling-star2' /> */}
     </div>
     <main>
       <Header />
@@ -88,8 +80,6 @@ function App() {
         <Route exact path='/' render={() => 
           <>
             <HomePage />
-            {/* <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' /> */}
-
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
