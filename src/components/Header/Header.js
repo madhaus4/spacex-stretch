@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
-import logo from '../../TheNXTfrontier.png'
 import logoLight from '../../TheNXTfrontier-light.svg'
 import './Header.css'
 
@@ -16,10 +15,6 @@ function Header() {
     <nav className='nav-bar'>
       <img className='logo' src={logoLight} alt='The NXT Frontier logo' />
       <div className='links-container'>
-        {/* {!isRocketsPage && <NavLink to='/' 
-          className='history-link'
-          >Articles
-        </NavLink>} */}
         {isRocketsPage && <NavLink to='/' 
           className='history-link'
           onClick={() => togglePageView()}
