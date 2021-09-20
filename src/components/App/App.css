@@ -40,36 +40,60 @@ footer > a {
 }
 
 .star-container {
-  display: flex;
-  flex-wrap: wrap;
-  height: 30vw;
-  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(3, fr);
+  grid-template-rows: repeat(3, fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-areas:
+  "star star star star"
+  "star star star star"
+  "star star star star"
+  "star star star star";
   z-index: 1;
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  margin: 0 10%;
+  /* display: flex;
+  flex-wrap: wrap;
   align-content: space-around;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  */
 }
 
+/* .star {
+  width: 10rem;
+  height: 10rem;
+} */
+
 .sparkling-star1 {
-  width: 10px;
+  width: 5px;
   background: transparent;
   border: none;
 }
 .sparkling-star2 {
-  width: 40px;
+  width: 10px;
   background: transparent;
   border: none;
+  margin: 10rem 0 0 10rem;
 }
 .sparkling-star3 {
-  width: 10px;
+  width: 11px;
   background: transparent;
   border: none;
 }
 .sparkling-star4 {
-  width: 10px;
+  width: 7px;
   background: transparent;
   border: none;
+}
+.sparkling-star5 {
+  width: 8px;
+  background: transparent;
+  border: none;
+  margin: 10rem 0 0 10rem;
 }
 /* .star {
   width: 30px;
