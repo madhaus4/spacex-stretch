@@ -14,7 +14,6 @@ function HistoricalContainer({ theHistory, launchImages, handleFavorite }) {
       removeFromFavorites(foundFavorite)
     } else {
       addToFavorites(story)
-      // handleFavorite(story.id)
     }
   }
 
