@@ -21,7 +21,12 @@
 ---
 
 ### Summary
-  
+- This application is built for users to learn more about SpaceX rockets and thier history. When the user visits the website, the main page will include a rocket animation and an introduction to what the page is about. From there, if the user scrolls down, they can view a variety of news articles regarding SpaceX. There is an opportunity for the user to bookmark specific articles and store them for later reading for to re-visit. The logo at the bottom of the page will return the user to the top of the home page. 
+
+- When the user selects "Rockets" from the navigation bar, they will be taken to a page dedicated to the four SpaceX rockets that includes details about each of the rockets. The user can return home by either selectiong the "Home" option in navigation or clicking the logo at the bottom of the page. 
+
+- In addition, this application is set up as a Progressive Web App to offer the user full capabilities when offline. Users will still be able to store thier bookmarked articles and those saved articles will persist when back online. This functionality also includes the ability to download the application to the user's desktop or mobile home screen for quick access. With a sleek, responsive design, the app will adapt to a variety of screen sizes. 
+
  
 ### Tech Used
 JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animations | Service Workers && Caching | 
