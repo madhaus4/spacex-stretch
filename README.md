@@ -25,7 +25,9 @@
 
 - When the user selects "Rockets" from the navigation bar, they will be taken to a page dedicated to the four SpaceX rockets that includes details about each of the rockets. The user can return home by either selectiong the "Home" option in navigation or clicking the logo at the bottom of the page. 
 
-- In addition, this application is set up as a Progressive Web App to offer the user full capabilities when offline. Users will still be able to store thier bookmarked articles and those saved articles will persist when back online. This functionality also includes the ability to download the application to the user's desktop or mobile home screen for quick access. With a sleek, responsive design, the app will adapt to a variety of screen sizes. 
+- If a user enters a URL path that is incorrect, they will be directed to an error page to help guide them to the correct site address. 
+
+- In addition, this application is set up as a Progressive Web App to offer the user full capabilities when offline. Users will still be able to store thier bookmarked articles and those saved articles will persist when back online. This functionality also includes the ability to download the application to the user's desktop or mobile home screen for quick access. With a sleek, responsive design, the app will smoothly adapt to a variety of screen sizes. 
 
  
 ### Tech Used
@@ -43,7 +45,10 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 [Return to top](#spacex-stretch)
 
 ### Current Features
-- 
+- User's bookmarked articles will persist on reload with implemented localStorage for an enhanced user experience. 
+- User can un-bookmark any article to remove from their saved articles
+- User can download the application to the device of their choosing for easeier access 
+- User can use application offline
 
 
 ### Future Features & Noteworthy Limitations
