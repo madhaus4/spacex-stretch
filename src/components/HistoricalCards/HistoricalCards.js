@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HistoricalCards.css';
 import savedIcon from '../../images/saved-purple.png';
 import unsavedIcon from '../../images/unsaved-purple.png';
 
 
 function HistoricalCards({ story, image, updateFavorites }) {
-  // const [isFavorited, setIsFavorited] = useState(false)
-
-  // const handleIcon = () => {
-  //   setIsFavorited(!isFavorited)
-  //   updateFavorites(story)
-  // }
 
   return (
     <article className='historical-card' id={story.id}>
