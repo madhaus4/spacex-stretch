@@ -85,7 +85,7 @@ Overall, we are ecstatic with the MVP and product we achieved. The three of us w
 ---
 ### Contributors
 [Maria DelSignore](https://github.com/madhaus4) <br>
-[Steven Burg](https://github.com/saberg1) <br>
+[Steven Berg](https://github.com/saberg1) <br>
 [Megan McBride](https://github.com/Meggs625) <br>
 
 
