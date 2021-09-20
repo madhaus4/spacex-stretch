@@ -57,6 +57,9 @@ JavaScript | CSS | React | ReactRouter | Cypress/E2E | fetchAPI | GSAP animation
 
 
 ### Preview
+![recording (12)](https://user-images.githubusercontent.com/78767067/134087755-7ea2dffa-a15e-4f8c-980e-8b74d52b972d.gif)
+![recording (13)](https://user-images.githubusercontent.com/78767067/134087779-63154a32-aae2-4360-aa36-adccdb0e5472.gif)
+![recording (14)](https://user-images.githubusercontent.com/78767067/134087805-0a4a2ca9-06f3-43b6-90d3-5ef1d84ecb1f.gif)
 
 
 
