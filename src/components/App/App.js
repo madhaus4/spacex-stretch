@@ -9,7 +9,7 @@ import HistoricalContainer from '../HistoricalContainer/HistoricalContainer';
 import RocketContainer from '../RocketContainer/RocketContainer';
 import Error from '../Error/Error';
 import './App.css';
-import logo from '../../TheNXTfrontier.png'
+// import logo from '../../TheNXTfrontier.png'
 import star1 from '../../images/star1.png'
 import logoLight from '../../TheNXTfrontier-light.svg'
 import { gsap } from "gsap";
@@ -33,13 +33,20 @@ function App() {
   const fetchData = () => {
     getData('v4', 'history')
       .then(data => setHistory(cleanData(data)))
-      .catch(error => setError(error))
+      .catch(error => setError(error.status))
+      .catch(error => displayError(error))
     getData('v4', 'rockets')
       .then(data => setRockets(data))
       .catch(error => setError(error))
     getData('v5', 'launches')
       .then(data => setLaunchImages([...data[19].links.flickr.original, data[21].links.flickr.original]))
       .catch(error => setError(error))
+  }
+
+  const displayError = (response) => {
+    const errorCode = response.status;
+    console.log(errorCode)
+    setError(errorCode)
   }
 
   useEffect(() => {
@@ -83,7 +90,6 @@ function App() {
           <div>
             <HomePage />
             {/* <img src={star1}  ref={twinkleStar} alt='sparkling stars' className='sparkling-star' /> */}
-
             <HistoricalContainer 
               theHistory={history} 
               launchImages={launchImages}
@@ -113,5 +119,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
