@@ -1,6 +1,6 @@
 <div align="center"><img src="https://user-images.githubusercontent.com/76507607/134072647-5696a32a-19a9-4db9-bf24-f5c5751f11b7.png" height="150px" width="280px" alt="logo"/><h1>The NXT Frontier</h1>
 <p>An application for users to gain an understanding about SpaceX rockets</p>
-<a href="https://nxtfrontier.netlify.app/">View Deployed Site Here</a>
+<a href="https://spacex-stretch.vercel.app/">View Deployed Site Here</a>
 </div>
 
 
